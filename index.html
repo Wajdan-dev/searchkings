@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>searchkings</title>
+  <link rel="icon" href="./assets/images/favicon-16x16-e8c8f74ec4.webp">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '400px',  // Example custom screen size
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+  <!-- header  -->
+
+  <div class="fixed-header lg:relative fixed justify-center z-50 w-full flex">
+    <div class="transition-all fixed top-0   w-full">
+      <div class="  mx-auto custom-container px-12 relative z-10 items-center bg-white bg-opacity-95    lg:shadow-lg">
+        <div class="relative flex flex-wrap xl:flex-nowrap items-center justify-between flex-row lg:h-full !h-[76px]">
+          <a href="./index.html" class="sk-logo flex-1 md:flex-none lg:w-max lg:text-inherit mr-6">
+            <div
+              class="lg:block inline-flex items-center justify-start md:justify-center w-full sm:w-1/2 md:w-full h-full">
+              <img src="./assets/images/sk-logo-b36c2470ac.webp" alt=""
+                class="w-[130px] sm:w-[171px] transition-all block" />
+            </div>
+          </a>
+          <div
+            class="absolute z-50 w-[40px] h-[40px] mx-auto block lg:hidden rounded-2xl right-16 mr-2 overflow-hidden">
+            <button class="text-[#4a4a4a] w-10 h-10 relative focus:outline-none color-change">
+              <span class="sr-only" hidden="">Call button</span>
+              <a href="tel:1-888-335-4647">
+                <div
+                  class="flex items-center justify-center w-5 h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <span class="material-symbols-outlined color-change">call</span>
+                </div>
+              </a>
+            </button>
+          </div>
+          <div class="absolute z-50 w-[40px] h-[40px] mx-auto block lg:hidden rounded-2xl right-8 overflow-hidden">
+            <button class="text-[#4a4a4a] w-10 h-10 relative focus:outline-none color-change">
+              <span class="sr-only" hidden="">Chat button</span>
+              <div
+                class="flex items-center justify-center w-5 h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <span class="material-symbols-outlined color-change">forum</span>
+              </div>
+            </button>
+          </div>
+          <div
+            class="absolute z-50 w-[40px] h-[40px] mx-auto lg:hidden rounded-2xl right-0 overflow-hidden -mt-1 flex justify-end items-center">
+            <button id="mobile-nav-toggle"
+              class="text-gray-500 w-6 h-6 relative focus:outline-none mt-1 color-change toggle-button">
+              <span class="sr-only" hidden="">Open menu</span>
+              <div
+                class="flex items-center justify-end w-5 h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <span aria-hidden="true"
+                  class="block absolute h-[3px] rounded-full w-5 bg-[#4a4a4a] transition translate-y-[-6px] color-change"></span>
+                <span aria-hidden="true"
+                  class="block absolute h-[3px] rounded-full w-4 bg-[#4a4a4a] transition translate-y-0 color-change"></span>
+                <span aria-hidden="true"
+                  class="block absolute h-[3px] rounded-full w-3 bg-[#4a4a4a] transition translate-y-[6px] color-change"></span>
+              </div>
+            </button>
+          </div>
+
+          <div class="desktop-header lg:flex hidden" id="">
+            <nav
+              class="relative w-full lg:py-[0] pt-[12vh] pb-[6vh] flex flex-col justify-between h-full lg:h-unset lg:static lg:w-auto lg:flex lg:flex-wrap lg:items-center lg:justify-center lg:container mx-auto">
+              <ul id="menu"
+                class="items-center overscroll-contain overflow-x-hidden lg:overflow-visible lg:inline-flex lg:gap-8">
+                <!-- About Us Dropdown -->
+                <li
+                  class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                  <a href="javascript:void(0)" onclick="toggleDropdown(this)"
+                    class="flex items-center lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-[#e53c2e] lg:active:text-[#e53c2e]">
+                    <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                      <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                        About Us
+                      </div>
+                      <div class="transition-transform lg:order-2 order-1 flex group rotate-0">
+                        <img id="aboutIcon" src="./assets/images/expand_more-8a5d8740a5.svg"
+                          class="rotate-0 lg:-rotate-90 lg:-ml-0 !ml-0 -ml-2 invert lg:invert-0" alt="Expand Icon"
+                          width="24" height="24" />
+                      </div>
+                    </div>
+                  </a>
+                  <div id="aboutDropdown"
+                    class="lg:w-[696px] lg:absolute top-[70px] z-1 lg:left-0 transition-all pointer-events-auto max-h-72 hidden z-10 lg:border-none lg:bg-transparent bg-[#4a4a4a]">
+                    <div class="lg:flex w-full relative z-10">
+                      <ul
+                        class="lg:text-black text-white lg:text-sm lg:shadow-xl lg:bg-white lg:bg-opacity-[97%] transition-colors lg:px-2 lg:rounded-b-3xl overflow-hidden ease-out duration-100">
+                        <li class="w-full lg:w-[250px] px-2 py-2">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg hover:text-white">
+                              Achievements
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 py-2">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg hover:text-white">
+                              Testimonials
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 py-2">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg hover:text-white">
+                              Join Our Team
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 py-2">
+                          <a href="./about-us.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg hover:text-white">
+                              About Us
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 py-2">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg hover:text-white">
+                              Podcasts
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Services Dropdown -->
+                <li
+                  class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                  <a href="javascript:void(0)" onclick="toggleDropdown(this)"
+                    class="flex items-center lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-[#e53c2e] lg:active:text-[#e53c2e]">
+                    <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                      <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                        Services
+                      </div>
+                      <div class="transition-transform lg:order-2 order-1 flex group rotate-0">
+                        <img id="servicesIcon" src="./assets/images/expand_more-8a5d8740a5.svg"
+                          class="rotate-0 lg:-rotate-90 lg:-ml-0 !ml-0 -ml-2 invert lg:invert-0" alt="Expand Icon"
+                          width="24" height="24" />
+                      </div>
+                    </div>
+                  </a>
+                  <div id="servicesDropdown"
+                    class="lg:w-[696px] lg:absolute top-[70px] z-1 lg:left-0 transition-all pointer-events-auto max-h-72 hidden z-10 lg:border-none lg:bg-transparent bg-[#4a4a4a]">
+                    <div class="lg:flex w-full relative z-10">
+                      <ul
+                        class="lg:text-black text-white lg:text-sm lg:shadow-xl lg:bg-white lg:bg-opacity-[97%] transition-colors lg:px-2 lg:rounded-b-3xl overflow-hidden ease-out duration-100">
+                        <li class="w-full lg:w-[250px] px-2 my-2 group">
+                          <a href="./ads-management.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#0075E3] hover:shadow-lg group-hover:bg-[#0075E3] hover:text-white">
+                              Ads Management
+                            </div>
+                            <div
+                              class="h-full items-center justify-center og-image items-center overflow-hidden absolute h-full left-[266px] top-1/2 -translate-y-1/2 bg-white w-[376px] bg-opacity-95 z-10 rounded-br-2xl hidden group-hover:flex transition-all duration-300 ease-in-out">
+                              <img class="lazy max-w-[374px] p-4 entered loaded" width="374px" alt="Ads Management"
+                                data-ll-status="loaded" src="./assets/images/ads-management-af0e4ffc41.webp">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 my-2 group">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg group-hover:bg-[#ee312f] hover:text-white">
+                              Call Intelligence
+                            </div>
+                            <div
+                              class="h-full items-center justify-center og-image items-center overflow-hidden absolute h-full left-[266px] top-1/2 -translate-y-1/2 bg-white w-[376px] bg-opacity-95 z-10 rounded-br-2xl hidden group-hover:flex transition-all duration-300 ease-in-out">
+                              <img class="lazy max-w-[374px] p-4 entered loaded" width="374px" alt="Call Intelligence"
+                                data-ll-status="loaded" src="./assets/images/call-intelligence-b15f0393b0.webp">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 my-2 group">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#32b355] hover:shadow-lg group-hover:bg-[#32b355] hover:text-white">
+                              Local Services Ads
+                            </div>
+                            <div
+                              class="h-full items-center justify-center og-image items-center overflow-hidden absolute h-full left-[266px] top-1/2 -translate-y-1/2 bg-white w-[376px] bg-opacity-95 z-10 rounded-br-2xl hidden group-hover:flex transition-all duration-300 ease-in-out">
+                              <img class="lazy max-w-[374px] p-4 entered loaded" width="374px" alt="Local Services Ads"
+                                data-ll-status="loaded" src="./assets/images/local-services-ads-a58fa2c978.webp">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 my-2 group">
+                          <a href="./ecommerce.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#01594d] hover:shadow-lg group-hover:bg-[#01594d] hover:text-white">
+                              eCommerce
+                            </div>
+                            <div
+                              class="h-full items-center justify-center og-image items-center overflow-hidden absolute h-full left-[266px] top-1/2 -translate-y-1/2 bg-white w-[376px] bg-opacity-95 z-10 rounded-br-2xl hidden group-hover:flex transition-all duration-300 ease-in-out">
+                              <img class="lazy max-w-[374px] p-4 entered loaded" width="374px" alt="eCommerce"
+                                data-ll-status="loaded" src="./assets/images/ecommerce-dc1ed5be19.webp">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 my-2 group">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#dc001d] hover:shadow-lg group-hover:bg-[#dc001d] hover:text-white">
+                              Video Marketing
+                            </div>
+                            <div
+                              class="h-full items-center justify-center og-image items-center overflow-hidden absolute h-full left-[266px] top-1/2 -translate-y-1/2 bg-white w-[376px] bg-opacity-95 z-10 rounded-br-2xl hidden group-hover:flex transition-all duration-300 ease-in-out">
+                              <img class="lazy max-w-[374px] p-4 entered loaded" width="374px" alt="Video Marketing"
+                                data-ll-status="loaded" src="./assets/images/video-marketing-f7778209cf.webp">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 my-2 group">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#063649] hover:shadow-lg group-hover:bg-[#063649] hover:text-white">
+                              Website Development
+                            </div>
+                            <div
+                              class="h-full items-center justify-center og-image items-center overflow-hidden absolute h-full left-[266px] top-1/2 -translate-y-1/2 bg-white w-[376px] bg-opacity-95 z-10 rounded-br-2xl hidden group-hover:flex transition-all duration-300 ease-in-out">
+                              <img class="lazy max-w-[374px] p-4 entered loaded" width="374px" alt="Website Development"
+                                data-ll-status="loaded" src="./assets/images/web-services-8e6f6ed158.webp">
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Contact Us Dropdown -->
+                <li
+                  class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                  <a href="javascript:void(0)" onclick="toggleDropdown(this)"
+                    class="flex items-center lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-[#e53c2e] lg:active:text-[#e53c2e]">
+                    <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                      <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                        Solutions
+                      </div>
+                      <div class="transition-transform lg:order-2 order-1 flex group rotate-0">
+                        <img id="contactIcon" src="./assets/images/expand_more-8a5d8740a5.svg"
+                          class="rotate-0 lg:-rotate-90 lg:-ml-0 !ml-0 -ml-2 invert lg:invert-0" alt="Expand Icon"
+                          width="24" height="24" />
+                      </div>
+                    </div>
+                  </a>
+                  <div id="contactDropdown"
+                    class="lg:w-[696px] lg:absolute top-[70px] z-1 lg:left-0 transition-all pointer-events-auto max-h-72 hidden z-10 lg:border-none lg:bg-transparent bg-[#4a4a4a]">
+                    <div class="lg:flex w-full relative z-10">
+                      <ul
+                        class="lg:text-black text-white lg:text-sm lg:shadow-xl lg:bg-white lg:bg-opacity-[97%] transition-colors lg:px-2 lg:rounded-b-3xl overflow-hidden ease-out duration-100">
+                        <li class="w-full lg:w-[250px] px-2 py-2">
+                          <a href="./plans.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg hover:text-white">
+                              Plans & Pricing
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 py-2">
+                          <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg hover:text-white">
+                              Partners & Franchises
+                            </div>
+                          </a>
+                        </li>
+                        <li class="w-full lg:w-[250px] px-2 py-2">
+                          <a href="./hosting.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                            <div
+                              class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose hover:bg-[#ee312f] hover:shadow-lg hover:text-white">
+                              Web Hosting & Maintenance
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                  <a href=""
+                    class="flex items-center lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-[#e53c2e] lg:active:text-[#e53c2e]">
+                    <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                      <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                        Case Studies
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li
+                  class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                  <a href=""
+                    class="flex items-center lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-[#e53c2e] lg:active:text-[#e53c2e]">
+                    <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                      <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                        Contact Us
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <div class="hidden showing">
+                  <li
+                    class="relative xl:ml-2 lg:text-black text-sm from-[#ffc04d] to-[#ffe34d] bg-gradient-to-tr hover:bg-black rounded-3xl">
+                    <a href="#"
+                      class="hidden xl:flex items-center transition-all text-black gap-2 px-4 p-1 rounded-3xl min-h-[40px] hover:bg-black/100 hover:text-white tracking-tight w-[192px]">
+                      $500 in Google Ads Credit
+                    </a>
+                  </li>
+                  <li
+                    class="relative mr-0 xl:ml-8 lg:text-black text-sm from-[#da1c1c] to-[#ee312f] bg-gradient-to-b rounded-3xl">
+                    <a href="#"
+                      class="hidden xl:flex items-center transition-all !text-white px-4 p-1 rounded-3xl min-h-[40px] hover:bg-black/100 hover:text-white tracking-tight w-[138px]">
+                      1 (888) 335-4647
+                    </a>
+                  </li>
+                </div>
+                <div class="mx-12 py-4 flex flex-col gap-4 pr-2 lg:hidden">
+                  <div class="flex lg:hidden w-full justify-end">
+                    <div class="lg:block inline-flex items-center justify-start sm:justify-center h-full">
+                      <img src="./assets/images/sk-logo-b36c2470ac.webp" class="w-[130px] transition-all hidden"
+                        alt="" />
+                    </div>
+                    <!-- <div class="flex lg:hidden gap-4 items-center justify-end">
+                      <a    ><img
+                          data-src="https://cdn.searchkings.ca/img/icons/social/facebook-edce9ccd28.svg" class="lazy"
+                          alt="Facebook" /></a>
+                      <a    ><img
+                          data-src="https://cdn.searchkings.ca/img/icons/social/instagram-ba8263b493.svg" class="lazy"
+                          alt="Instagram" /></a>
+                      <a    ><img
+                          data-src="https://cdn.searchkings.ca/img/icons/social/linkedin-4435398b48.svg" class="lazy"
+                          alt="LinkedIn" /></a>
+                      <a    ><img
+                          data-src="https://cdn.searchkings.ca/img/icons/social/youtube-7610641ce1.svg" class="lazy"
+                          alt="Youtube" /></a>
+                    </div> -->
+                  </div>
+                </div>
+              </ul>
+            </nav>
+          </div>
+          <div id="nav-drawer" class="fixed top-0 right-0 w-full h-screen flex-1 z-40 hidden">
+            <div class="transition-all flex w-full h-full relative">
+              <div class="absolute inset-0 nav-diagonal-gradient lg:bg-transparent"></div>
+
+              <div class="absolute inset-0 backdrop-blur-lg">
+                <nav
+                  class="relative w-full lg:py-[0] pt-[12vh] pb-[6vh] flex flex-col justify-between h-full lg:h-unset lg:static lg:w-auto lg:flex lg:flex-wrap lg:items-center lg:justify-center lg:container mx-auto">
+                  <ul
+                    class="items-center hide-scrollbar overscroll-contain overflow-x-hidden lg:overflow-visible lg:inline-flex lg:gap-8">
+                    <li
+                      class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black">
+                      <a href="#"
+                        class="flex items-center border-b-[2px] border-white lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-primary lg:active:text-primary"
+                        onclick="toggleDropdown1(event)">
+                        <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                          <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                            About Us
+                          </div>
+                          <div class="transition-transform lg:order-2 order-1 flex group rotate-0">
+                            <img src="./assets/images/expand_more-8a5d8740a5.svg"
+                              class="rotate-0 lg:-rotate-90 lg:-ml-0 !ml-0 -ml-2 invert lg:invert-0" alt="Expand Icon"
+                              width="24" height="24" />
+                          </div>
+                        </div>
+                      </a>
+                      <div id="dropdown"
+                        class="lg:w-[696px] lg:absolute top-[70px] z-1 lg:left-0 transition-all pointer-events-auto max-h-72 hidden z-10 lg:border-none lg:bg-transparent bg-[#4a4a4a]">
+                        <div class="lg:flex w-full relative z-10">
+                          <ul
+                            class="lg:text-black text-white lg:text-sm lg:shadow-xl lg:bg-white lg:bg-opacity-[97%] transition-colors lg:px-2 lg:rounded-b-3xl overflow-hidden ease-out duration-100">
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:group-hover:bg-primary group-hover:bg-white lg:group-hover:text-white group-hover:text-black">
+                                  Achievements
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:group-hover:bg-primary group-hover:bg-white lg:group-hover:text-white group-hover:text-black">
+                                  Testimonials
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:group-hover:bg-primary group-hover:bg-white lg:group-hover:text-white group-hover:text-black">
+                                  Join Our Team
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="./about-us.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:group-hover:bg-primary group-hover:bg-white lg:group-hover:text-white group-hover:text-black">
+                                  About Us
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:group-hover:bg-primary group-hover:bg-white lg:group-hover:text-white group-hover:text-black">
+                                  Podcasts
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li
+                      class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                      <a href="#" onclick="toggleDropdown2(event)"
+                        class="flex items-center border-b-[2px] border-white lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-primary lg:active:text-primary">
+                        <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                          <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                            Services
+                          </div>
+                          <div class="transition-transform lg:order-2 order-1 flex group rotate-0"
+                            :class="[showChildren ? '-rotate-180 lg:rotate-90' : 'rotate-0']">
+                            <img src="./assets/images/expand_more-8a5d8740a5.svg"
+                              class="rotate-0 lg:-rotate-90 lg:-ml-0 !ml-0 -ml-2 invert lg:invert-0" alt="Expand Icon"
+                              width="24" height="24" />
+                          </div>
+                        </div>
+                      </a>
+                      <div id="dropdown2"
+                        class="lg:w-[696px] lg:absolute top-[70px] z-1 lg:left-0 transition-all pointer-events-auto max-h-72 z-10 lg:border-none lg:bg-transparent bg-[#4a4a4a] hidden">
+                        <div class="lg:flex w-full relative z-10">
+                          <ul
+                            class="lg:text-black text-white lg:text-sm lg:shadow-xl lg:bg-white lg:bg-opacity-[97%] transition-colors lg:px-2 lg:rounded-b-3xl overflow-hidden ease-out duration-100">
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="./ads-management.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:bg-[#0075E3] lg:group-hover:text-white group-hover:bg-white group-hover:text-black">
+                                  Ads Management
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:bg-[#dc001d] lg:group-hover:text-white group-hover:bg-white group-hover:text-black">
+                                  Call Intelligence
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:bg-[#32B355] lg:group-hover:text-white group-hover:bg-white group-hover:text-black">
+                                  Local Services Ads
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="./ecommerce.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:bg-[#01594d] lg:group-hover:text-white group-hover:bg-white group-hover:text-black">
+                                  eCommerce
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:bg-[#dc001d] lg:group-hover:text-white group-hover:bg-white group-hover:text-black">
+                                  Video Marketing
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:bg-[#063649] lg:group-hover:text-white group-hover:bg-white group-hover:text-black">
+                                  Web Services
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                      <a href="#" onclick="toggleDropdown3(event)"
+                        class="flex items-center border-b-[2px] border-white lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-primary lg:active:text-primary">
+                        <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                          <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                            Solutions
+                          </div>
+                          <div class="transition-transform lg:order-2 order-1 flex group rotate-0"
+                            :class="[showChildren ? '-rotate-180 lg:rotate-90' : 'rotate-0']">
+                            <img src="./assets/images/expand_more-8a5d8740a5.svg"
+                              class="rotate-0 lg:-rotate-90 lg:-ml-0 !ml-0 -ml-2 invert lg:invert-0" alt="Expand Icon"
+                              width="24" height="24" />
+                          </div>
+                        </div>
+                      </a>
+
+                      <div id="dropdown3"
+                        class="lg:w-[696px] lg:absolute top-[70px] z-1 lg:left-0 transition-all pointer-events-auto max-h-72 z-10 lg:border-none lg:bg-transparent bg-[#4a4a4a] hidden">
+                        <div class="lg:flex w-full relative z-10">
+                          <ul
+                            class="lg:text-black text-white lg:text-sm lg:shadow-xl lg:bg-white lg:bg-opacity-[97%] transition-colors lg:px-2 lg:rounded-b-3xl overflow-hidden ease-out duration-100">
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="./plans.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:group-hover:bg-primary group-hover:bg-white lg:group-hover:text-white group-hover:text-black">
+                                  Plans &amp; Pricing
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="#" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:group-hover:bg-primary group-hover:bg-white lg:group-hover:text-white group-hover:text-black">
+                                  Partners &amp; Franchises
+                                </div>
+                              </a>
+                            </li>
+                            <li
+                              class="lg:static relative flex group text-base items-center lg:items-start hover:mx-0 lg:first:hover:mt-0 lg:last:hover:mb-0 lg:my-0 lg:mx-0 lg:text-sm lg:w-[250px] lg:first:pt-2 lg:last:pb-2">
+                              <a href="./hosting.html" class="flex w-full lg:group-hover:text-white lg:h-8 h-10">
+                                <div
+                                  class="w-full flex lg:justify-start justify-end items-center lg:rounded-full rounded-none lg:group-hover:justify-between lg:px-6 px-12 lg:mr-0 py-4 leading-loose group-hover:shadow-md lg:group-hover:px-6 group-hover:px-12 group-hover:lg:group-hover:bg-primary group-hover:bg-white lg:group-hover:text-white group-hover:text-black">
+                                  Web Hosting &amp; Maintenance
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                      <a href="#"
+                        class="flex items-center border-b-[2px] border-white lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-primary lg:active:text-primary">
+                        <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                          <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                            Case Studies
+                          </div>
+                          <div class="transition-transform lg:order-2 order-1 flex group rotate-0"
+                            :class="[showChildren ? '-rotate-180 lg:rotate-90' : 'rotate-0']">
+                            <span class="material-symbols-outlined block lg:text-lg text-xl lg:rotate-0 rotate-180">
+                              <span class="block lg:hidden">east</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="relative first:mt-0 mx-0 mt-0 md:last:mr-0 lg:mt-0 lg:first:ml-0 lg:last:mr-3 lg:py-1 text-white lg:text-black lg:before:border-none before:border border-white before:border-x-[1px] before:block before:mx-12 before:border-none focus:outline-none active:outline-none focus:bg-transparent active:bg-transparent lg:hover:text-[#DA1C1C]">
+                      <a href="#"
+                        class="flex items-center border-b-[2px] border-white lg:w-full pl-4 pr-2 py-2 xl:text-base transition-colors lg:!bg-transparent lg:!bg-none mx-12 lg:mx-0 lg:border-none lg:hover:text-primary lg:active:text-primary">
+                        <div class="grow flex justify-between lg:justify-center pr-0 items-center py-2">
+                          <div class="mr-0 lg:text-base text-2xl lg:order-1 order-2">
+                            Contact Us
+                          </div>
+                          <div class="transition-transform lg:order-2 order-1 flex group rotate-0"
+                            :class="[showChildren ? '-rotate-180 lg:rotate-90' : 'rotate-0']">
+                            <span class="material-symbols-outlined block lg:text-lg text-xl lg:rotate-0 rotate-180">
+                              <span class="block lg:hidden">east</span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <div class="mx-12 py-4 flex flex-col gap-4 pr-2 lg:hidden">
+                      <div class="flex lg:hidden w-full justify-end">
+                        <div class="lg:block inline-flex items-center justify-start sm:justify-center h-full">
+                          <img
+                            class="w-[130px] transition-all block lg:invert-0 lg:brightness-[unset] brightness-0 invert"
+                            :class="showNavigation ? 'block lg:invert-0 lg:brightness-[unset] brightness-0 invert' : 'hidden'"
+                            src="./assets/images/sk-logo-b36c2470ac.webp" alt="SearchKings logo" width="260"
+                            height="32">
+                        </div>
+                      </div>
+                      <div class="flex lg:hidden gap-4 items-center justify-end"> <a><img class="lazy entered loaded"
+                            alt="Facebook" data-ll-status="loaded" src="./assets/images/facebook-edce9ccd28.svg"></a>
+                        <a><img class="lazy entered loaded" alt="Instagram" data-ll-status="loaded"
+                            src="./assets/images/instagram-ba8263b493.svg"></a>
+                        <a><img class="lazy entered loaded" alt="LinkedIn" data-ll-status="loaded"
+                            src="./assets/images/linkedin-4435398b48.svg"></a>
+                        <a><img class="lazy entered loaded" alt="Youtube" data-ll-status="loaded"
+                            src="./assets/images/youtube-7610641ce1.svg"></a>
+                      </div>
+                    </div>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end header  -->
+
+  <!-- main content  -->
+
+  <div class="z-10 lg:h-auto transition-all bg-white">
+    <main class="grow bg-white -z-10 xl:h-screen !max-w-[calc(1200px + (2rem * 2))]">
+      <section class="hero-banner overflow-hidden">
+        <div
+          class="container 2xl:max-w-[1320px] px-12 lg:px-16 pb-12 md:pb-24 mx-auto relative flex flex-col md:flex-row items-start md:items-center md:min-h-[550px]">
+          <div
+            class="hidden md:block w-full h-full absolute opacity-30 bg-hero-circle bg-no-repeat bg-cover bg-center z-0 left-0 top-[50%] translate-y-[-50%] scale-150">
+          </div>
+          <div
+            class="relative z-1 flex flex-col md:flex-row justify-center w-full mx-auto h-[100%] mt-0 mb-0 items-center pt-40">
+            <div class="w-full lg:w-3/5 flex lg:justify-center flex-col">
+              <h1
+                class="mb-0 mt-0 pb-0 w-full mx-auto font-bold text-[38px] lg:text-[40px] md:text-5xl xl:text-6xl tracking-tight leading-[1.1] lg:text-center">
+                Helping you win <br class="sm:content-none content-['_↗']" />
+                with Google advertising
+              </h1>
+              <span
+                class="pt-0 flex md:items-center lg:justify-center w-full md:w-3/4 lg:w-full flex-col md:flex-row gap-0 md:gap-4 mt-4">
+                <span class="stars flex gap-1">
+                  <img src="./assets/images/star (1).png" alt="" />
+                  <img src="./assets/images/star (1).png" alt="" />
+                  <img src="./assets/images/star (1).png" alt="" />
+                  <img src="./assets/images/star (1).png" alt="" />
+                  <img src="./assets/images/star (1).png" alt="" />
+                </span>
+                <span class="text-base lg:text-xl xl:text-2xl leading-relaxed text-left font-light">1,700+ Google
+                  Customer Reviews</span>
+              </span>
+              <div class="flex flex-col gap-x-4 sm:flex-row lg:justify-center">
+                <a href="tel:1 (888) 335-4647" class="w-max block mt-4 no-underline shadow-xl rounded-[2rem]">
+                  <div
+                    class="group md:text-lg text-base text-white font-bold bg-gradient-to-r from-[#da1c1c] to-[#ee312f] h-full hover:text-white hover:from-black hover:to-black hover:bg-black/90 hover:!border-transparent px-7 py-3 flex items-center gap-2 rounded-[2rem]">
+                    <img src="./assets/images/call-50d0164ee7.svg" width="24" height="24" alt="call Icon"
+                      class="invert group-hover:invert relative" />
+                    <span class="tracking-tight">Call Us<span class="sr-only">Call Us</span></span>
+                  </div>
+                </a>
+                <a href=""
+                  class="w-max block mt-4 no-underline shadow-xl rounded-[2rem] border-2 border-black rounded-full hidden sm:block"
+                  @click.prevent="triggerChatModule">
+                  <div
+                    class="group md:text-lg text-base text-black font-bold bg-white h-full hover:text-white hover:from-black hover:to-black hover:bg-black/90 hover:!border-transparent px-7 py-3 flex items-center gap-2 rounded-[2rem]">
+                    <img src="./assets/images/forum-30619bb514.svg" width="24" height="24" alt="forum Icon"
+                      class="group-hover:invert relative" />
+                    <span class="tracking-tight">Chat with Us<span class="sr-only">Chat with Us</span></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="default-spacing !py-0 md:!pt-0">
+          <div
+            class="container mx-auto 2xl:max-w-[1320px] relative z-1 hero-box justify-center items-stretch flex flex-col lg:flex-row">
+            <div class="lg:w-1/3 px-12 lg:pl-12 py-8 lg:py-12 flex flex-col justify-center">
+              <h2 class="mb-4 lg:mb-8 text-[36px] font-bold">
+                Local businesses, <br class="xl:block content-['_↗']" />big
+                solutions
+              </h2>
+              <p class="text-[20px]">
+                SearchKings has helped thousands of local businesses, big and
+                small, grow by increasing their online presence and driving
+                more leads.
+              </p>
+              <a href="/solutions/plans/" class="py-2 mt-4 underline hover:text-[#4a4a4a]">View Our Plans &amp;
+                Pricing</a>
+            </div>
+            <div class="flex-col justify-center px-8 md:px-4 lg:px-0 lg:pr-4 lg:w-2/3 xl:rounded-3xl flex">
+              <div class="flex flex-wrap icon-wrapper">
+                <div class="w-1/2 md:w-1/3 md:px-7 p-4 py-2 md:py-6 lg:py-4 flex gap-2 items-start flex-col">
+                  <span class="material-symbols-outlined text-3xl text-[#e53c2e]">account_balance_wallet</span>
+                  <div>
+                    <p class="text-base md:text-xl lg:text-2xl font-bold">
+                      Flexible Budgets
+                    </p>
+                    <p class="text-xs md:text-base font-light w-auto xl:w-56">
+                      Adjust your budget and generate leads when you need.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-1/2 md:w-1/3 md:px-7 p-4 py-2 md:py-6 lg:py-4 flex gap-2 items-start flex-col">
+                  <span class="material-symbols-outlined text-3xl text-[#e53c2e]">copy_all</span>
+                  <div>
+                    <p class="text-base md:text-xl lg:text-2xl font-bold">
+                      Transparent Pricing
+                    </p>
+                    <p class="text-xs md:text-base font-light w-auto xl:w-56">
+                      You pay Google with your own credit card.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-1/2 md:w-1/3 md:px-7 p-4 py-2 md:py-6 lg:py-4 flex gap-2 items-start flex-col">
+                  <span class="material-symbols-outlined text-3xl text-[#e53c2e]">money_off</span>
+                  <div>
+                    <p class="text-base md:text-xl lg:text-2xl font-bold">
+                      Flat-rate Fee
+                    </p>
+                    <p class="text-xs md:text-base font-light w-auto xl:w-56">
+                      Creating scalable pricing structures so you pay less.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-1/2 md:w-1/3 md:px-7 p-4 py-2 md:py-6 lg:py-4 flex gap-2 items-start flex-col">
+                  <span class="material-symbols-outlined text-3xl text-[#e53c2e]">layers_clear</span>
+                  <div>
+                    <p class="text-base md:text-xl lg:text-2xl font-bold">
+                      No Contracts
+                    </p>
+                    <p class="text-xs md:text-base font-light w-auto xl:w-56">
+                      We work month-to-month with all clients.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-1/2 md:w-1/3 md:px-7 p-4 py-2 md:py-6 lg:py-4 flex gap-2 items-start flex-col">
+                  <span class="material-symbols-outlined text-3xl text-[#e53c2e]">credit_card_off</span>
+                  <div>
+                    <p class="text-base md:text-xl lg:text-2xl font-bold">
+                      No Start-up Fees<sup>*</sup>
+                    </p>
+                    <p class="text-xs md:text-base font-light w-auto xl:w-56">
+                      We give you $500 to start with Google Ads!
+                    </p>
+                    <small class="text-[10px] xs:text-[12px] font-light block leading-2 mt-1 xs:mt-2"><sup>*</sup>
+                      Conditions apply</small>
+                  </div>
+                </div>
+                <div class="w-1/2 md:w-1/3 md:px-7 p-4 py-2 md:py-6 lg:py-4 flex gap-2 items-start flex-col">
+                  <span class="material-symbols-outlined text-3xl text-[#e53c2e]">auto_awesome</span>
+                  <div>
+                    <p class="text-base md:text-xl lg:text-2xl font-bold">
+                      Call Intelligence
+                    </p>
+                    <p class="text-xs md:text-base font-light w-auto xl:w-56">
+                      We show you what's working and what's not.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="xl:bg-hero-about bg-no-repeat bg-cover xl:bg-contain bg-center flex items-center px-12 py-[3rem]">
+        <div
+          class="container flex justify-center mx-auto items-center lg:shadow-2xl rounded-none sm:rounded-3xl 2xl:max-w-[1320px]">
+          <div
+            class="flex flex-col items-stretch justify-around mx-auto gap-8 lg:gap-0 lg:flex-row bg-none lg:bg-[#4a4a4a] rounded-3xl">
+            <div class="relative mx-0 overflow-hidden rounded-3xl lg:w-3/5">
+              <img class="lazy object-cover w-full h-full max-h-[500px] lg:max-h-[634px] entered loaded"
+                alt="About us Image" data-ll-status="loaded" src="./assets/images/sk-connect-44e589e844.webp" />
+            </div>
+            <div class="flex flex-col items-start justify-center text-left w-full lg:w-2/5">
+              <div class="py-0 lg:py-12 px-0 lg:px-12 lg:text-white">
+                <h2 class="lg:text-white text-[36px] font-bold leading-1 mb-4 lg:mb-8">
+                  Connecting you to
+                  <span class="xl_sm:block">your customers</span>
+                </h2>
+                <p class="mb-4 lg:mb-8 text-[20px]">
+                  We focus on lead generation campaigns for small and mid-size
+                  businesses.
+                </p>
+                <p class="mb-8 text-[20px]">
+                  Since starting the company in 2009, we have had tremendous
+                  success in helping clients plan, build, and execute their
+                  digital advertising campaigns.
+                </p>
+                <a href="/about-us/" class="w-max block mt-4 no-underline shadow-xl rounded-[2rem] rounded-full">
+                  <div
+                    class="group md:text-lg text-base text-black font-bold bg-white h-full hover:text-white hover:from-black hover:to-black hover:bg-black/90 hover:!border-transparent px-7 py-3 flex items-center gap-2 rounded-[2rem] bg-gradient-to-r from-gradientPrimaryLeft to-gradientPrimaryRight lg:bg-white lg:from-transparent lg:to-transparent">
+                    <span class="tracking-tight">About Us<span class="sr-only">About Us</span></span>
+                    <img src="./assets/images/arrow_outward-87ed9f5456.svg" width="24" height="24"
+                      alt="arrow_outward Icon" class="invert-0 group-hover:invert relative" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="xl:bg-hero-streamline bg-no-repeat xl:bg-contain bg-cover bg-center flex items-center px-12 py-[3rem]">
+        <div
+          class="container flex justify-center items-center lg:shadow-2xl rounded-3xl bg-[#F8F8F8] 2xl:max-w-[1320px] mx-auto">
+          <div class="rounded-3xl flex flex-col lg:flex-row shadow-2xl justify-center items-center p-8 lg:p-0">
+            <div class="w-full lg:w-1/3 p-0 pb-8 lg:p-12">
+              <h2 class="mb-4 lg:mb-8 text-[36px] font-bold">
+                Streamline your digital advertising
+              </h2>
+              <p class="mb-4 lg:mb-8 text-[20px]">
+                We are experts at managing scalable search, remarketing,
+                display and video advertising campaigns.
+              </p>
+              <p class="sm:b-8 text-[20px]">
+                Our key areas of expertise include home and professional
+                services, with a large portion operating under a franchise or
+                a dealer network.
+              </p>
+            </div>
+            <div
+              class="w-full lg:w-2/3 icon-wrapper grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-y-12 gap-x-8 p-0 lg:p-12">
+              <a href="#" tabindex="0" class="sm:p-2">
+                <div class="flex md:block flex-col gap-0 sm:gap-2 items-start">
+                  <img class="w-[40px] h-[40px] lazy mb-2 entered loaded" alt="Ads Management"
+                    src="./assets/images/ads-management-aa1ac266a9.webp" />
+                  <div class="justify-center md:mt-2 no-underline group text-xl">
+                    <p class="lg:text-3xl text-xl font-bold mb-0">
+                      Ads Management
+                    </p>
+                    <p class="font-light leading-tight">
+                      Show up where your customers are
+                    </p>
+                  </div>
+                  <div class="hidden sm:flex mt-4">
+                    <span
+                      class="text-[#4a4a4a] border-b-2 border-[#4a4a4a] pb-1 hover:transition-all hover:text-black group-focus:text-black flex items-center pr-1 leading-none font-bold">Learn
+                      More
+                      <span class="Learn More About Call Intelligence"></span></span>
+                    <span
+                      class="material-symbols-outlined text-[#4a4a4a] group-hover:transition-all group-hover:text-black group-focus:text-black text-xl leading-none">arrow_outward</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" tabindex="0" class="sm:p-2">
+                <div class="flex md:block flex-col gap-0 sm:gap-2 items-start">
+                  <img class="w-[40px] h-[40px] lazy mb-2 entered loaded" alt="Ads Management"
+                    src="./assets/images/local-services-ads-dfb7f104b4.webp" />
+                  <div class="justify-center md:mt-2 no-underline group text-xl">
+                    <p class="lg:text-3xl text-xl font-bold mb-0">
+                      Local Services Ads
+                    </p>
+                    <p class="font-light leading-tight">
+                      Get verified and generate more leads
+                    </p>
+                  </div>
+                  <div class="hidden sm:flex mt-4">
+                    <span
+                      class="text-[#4a4a4a] border-b-2 border-[#4a4a4a] pb-1 hover:transition-all hover:text-black group-focus:text-black flex items-center pr-1 leading-none font-bold">Learn
+                      More
+                      <span class="Learn More About Call Intelligence"></span></span>
+                    <span
+                      class="material-symbols-outlined text-[#4a4a4a] group-hover:transition-all group-hover:text-black group-focus:text-black text-xl leading-none">arrow_outward</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" tabindex="0" class="sm:p-2">
+                <div class="flex md:block flex-col gap-0 sm:gap-2 items-start">
+                  <img class="w-[40px] h-[40px] lazy mb-2 entered loaded" alt="Ads Management"
+                    src="./assets/images/web-services-9ce6d09830.webp" />
+                  <div class="justify-center md:mt-2 no-underline group text-xl">
+                    <p class="lg:text-3xl text-xl font-bold mb-0">
+                      Web Services
+                    </p>
+                    <p class="font-light leading-tight">
+                      Modern sites for lead generation
+                    </p>
+                  </div>
+                  <div class="hidden sm:flex mt-4">
+                    <span
+                      class="text-[#4a4a4a] border-b-2 border-[#4a4a4a] pb-1 hover:transition-all hover:text-black group-focus:text-black flex items-center pr-1 leading-none font-bold">Learn
+                      More
+                      <span class="Learn More About Call Intelligence"></span></span>
+                    <span
+                      class="material-symbols-outlined text-[#4a4a4a] group-hover:transition-all group-hover:text-black group-focus:text-black text-xl leading-none">arrow_outward</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" tabindex="0" class="sm:p-2">
+                <div class="flex md:block flex-col gap-0 sm:gap-2 items-start">
+                  <img class="w-[40px] h-[40px] lazy mb-2 entered loaded" alt="Ads Management"
+                    src="./assets/images/call-intelligence-0cf2b73992.webp" />
+                  <div class="justify-center md:mt-2 no-underline group text-xl">
+                    <p class="lg:text-3xl text-xl font-bold mb-0">
+                      Call Intelligence
+                    </p>
+                    <p class="font-light leading-tight">
+                      Score and summarize all calls
+                    </p>
+                  </div>
+                  <div class="hidden sm:flex mt-4">
+                    <span
+                      class="text-[#4a4a4a] border-b-2 border-[#4a4a4a] pb-1 hover:transition-all hover:text-black group-focus:text-black flex items-center pr-1 leading-none font-bold">Learn
+                      More
+                      <span class="Learn More About Call Intelligence"></span></span>
+                    <span
+                      class="material-symbols-outlined text-[#4a4a4a] group-hover:transition-all group-hover:text-black group-focus:text-black text-xl leading-none">arrow_outward</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="xl:bg-hero-ci bg-no-repeat bg-cover xl:bg-contain bg-center flex items-center px-12 py-[3rem]">
+        <div
+          class="container flex justify-center items-center lg:shadow-2xl rounded-none sm:rounded-3xl mx-auto 2xl:max-w-[1320px]">
+          <div
+            class="flex flex-col xl:flex-row items-stretch justify-around mx-auto w-full rounded-3xl shadow-3xl xl:h-[540px]">
+            <div
+              class="relative mx-0 w-full xl:w-3/5 overflow-hidden bg-[#f8f8f8] flex justify-center rounded-3xl z-[1]">
+              <img class="lazy px-4 xl:px-0 pt-4 sm:pt-12 xl:absolute bottom-0 entered loaded"
+                alt="Call Intelligence Image screen" width="738" height="481" data-ll-status="loaded"
+                src="./assets/images/ci-image-new-96b380ad1c.svg" />
+            </div>
+            <div
+              class="relative flex flex-col items-start justify-center text-left w-full xl:w-2/5 lg:p-0 p-8 bg-[#4a4a4a] rounded-b-3xl xl:rounded-tr-3xl xl:rounded-br-2xl before:w-full before:h-32 xl:before:w-32 xl:before:h-full before:bg-brandGray before:absolute before:-top-4 xl:before:top-auto before:-mt-4 lg:before:mt-0 before:-ml-8 lg:before:ml-0 xl:before:-ml-8 xl:before:-z-[1]">
+              <div class="py-0 lg:py-16 lg:px-12 px-0 text-white z-10">
+                <h2 class="text-white mb-4 lg:mb-8 text-[24px] md:text-[36px] font-bold">
+                  Intelligent Marketing
+                </h2>
+                <p class="mb-4 lg:mb-8 text-white text-[15px] md:text-[20px]">
+                  Stay ahead of the competition. By evaluating, summarizing,
+                  and scoring phone call conversions, Call Intelligence offers
+                  valuable insights into campaign performance that have the
+                  potential to provide both time and cost savings.
+                </p>
+                <a href="#" class="w-max block mt-4 no-underline shadow-xl rounded-[2rem] bg-white rounded-full">
+                  <div
+                    class="group md:text-lg text-base text-black font-bold bg-white h-full hover:text-white hover:from-black hover:to-black hover:bg-black/90 hover:!border-transparent px-7 py-3 flex items-center gap-2 rounded-[2rem]">
+                    <span class="tracking-tight">Learn More<span class="sr-only">Learn More</span></span>
+                    <img src="./assets/images/arrow_outward-87ed9f5456.svg" width="24" height="24"
+                      alt="arrow_outward Icon" class="group-hover:invert relative" />
+                  </div>
+                </a>
+                <div class="flex sm:flex-col flex-wrap xs:flex-nowrap md:justify-center items-end sm:items-start"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- slider section  -->
+
+      <section
+        class="hidden lg:block splide section slider-section default-spacing mx-auto flex items-center flex-col splide--loop splide--ltr splide--draggable is-active is-overflow is-initialized">
+        <div class="slider-column w-full m-auto relative">
+          <div class="mx-auto p-12 py-8 pt-0 lg:p-8 lg:pt-0 text-left sm:text-center">
+            <p class="block sm:hidden font-light py-0 md:p-0 tracking-tight">
+              Meet our clients
+            </p>
+            <h2 class="mb-4 text-[24px] md:text-[36px] font-bold">
+              Trusted by 5,000+ customers
+            </h2>
+            <p class="mb-0 md:p-0 py-0 text-[15px] md:text-[20px]">
+              At SearchKings, we take pride in the relationships we have with
+              our customers. <br class="md:content-none content-['_↗']" />We
+              treat every customer like our first.
+            </p>
+          </div>
+          <div class="overflow-hidden padi">
+            <ul
+              class="target-slides main-slidess list-none flex max-w-full space-x-[48px] w-[300px] sm:w-auto sm:space-x-0 h-100 m-0 p-0">
+              <li
+                class="relative w-[300px] max-w-full sm:w-full lg:w-[768px] shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                  alt="Testimonial Quote image" />
+                <div class="max-sm:h-[60px] flex items-center">
+                  <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                    class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                    height="100" />
+                </div>
+                <p class="mb-0 font-light text-base sm:text-xl">
+                  Thanks to your efforts, we've seen noticeable improvements
+                  in various metrics, including click-through rates,
+                  conversions, and overall ROI. It's reassuring to know that
+                  our advertising budget is being managed effectively and
+                  yielding tangible result...
+                </p>
+                <div class="stars flex items-center">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="ml-2 xs:inline-block hidden">5.0</span>
+                </div>
+                <div class="text-left">
+                  <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                  <p class="font-light text-xs sm:text-xl">
+                    Celestial Cleaning
+                  </p>
+                </div>
+
+              </li>
+
+              <li role="group"
+                class="relative w-[300px] max-w-full sm:w-full lg:w-[768px] shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                <img class="lazy absolute -top-6 text-black w-16 entered loaded" alt="Testimonial Quote image"
+                  data-ll-status="loaded" src="./assets/images/format_quote-92edec28f4.svg">
+                <div class="max-sm:h-[60px] flex items-center"> <img
+                    class="lazy logo mb-2 max-sm:mt-2 object-contain entered loaded" alt="coastal.svg Logo" width="80"
+                    height="100" data-ll-status="loaded" src="./assets/images/coastal-2eee55d2e4.svg"> </div>
+                <p class="mb-0 font-light text-base sm:text-xl"> Since we joined the SearchKings team our revenue has
+                  increased 70%. Best business decision we ever made. Their personal attention and advice made all the
+                  difference. Yaz, is our account manager and is always available to answer questions and give a... </p>
+                <div class="stars flex items-center"> <span class="material-symbols-outlined">star</span> <span
+                    class="material-symbols-outlined">star</span> <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span> <span
+                    class="material-symbols-outlined">star</span> <span class="ml-2 xs:inline-block hidden">5.0</span>
+                </div>
+                <div class="text-left">
+                  <p class="text-sm sm:text-xl">Joseph Dittmar</p>
+                  <p class="font-light text-xs sm:text-xl"> Coastal Climate Experts LLC </p>
+                </div>
+              </li>
+
+
+              <li role="group"
+                class="relative w-[300px] max-w-full sm:w-full lg:w-[768px] shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                <img class="lazy absolute -top-6 text-black w-16 entered loaded" alt="Testimonial Quote image"
+                  data-ll-status="loaded" src="./assets/images/format_quote-92edec28f4.svg">
+                <div class="max-sm:h-[60px] flex items-center"> <img
+                    class="lazy logo mb-2 max-sm:mt-2 object-contain entered loaded" alt="c&amp;cplumbing.webp Logo"
+                    width="100" height="100" data-ll-status="loaded" src="./assets/images/c&cplumbing-218c342892.webp">
+                </div>
+                <p class="mb-0 font-light text-base sm:text-xl"> Since we have signed up two months ago, we have
+                  received more service calls. The quality of the leads is great, and we have recently decided to invest
+                  more money into this service and leave other advertising platforms. The customer service is awesom...
+                </p>
+                <div class="stars flex items-center"> <span class="material-symbols-outlined">star</span> <span
+                    class="material-symbols-outlined">star</span> <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span> <span
+                    class="material-symbols-outlined">star</span> <span class="ml-2 xs:inline-block hidden">5.0</span>
+                </div>
+                <div class="text-left">
+                  <p class="text-sm sm:text-xl">Carlos Calmell</p>
+                  <p class="font-light text-xs sm:text-xl"> C&amp;C Plumbing </p>
+                </div>
+              </li>
+
+              <li role="group"
+                class="relative w-[300px] max-w-full sm:w-full lg:w-[768px] shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                <img class="lazy absolute -top-6 text-black w-16 entered loaded" alt="Testimonial Quote image"
+                  data-ll-status="loaded" src="./assets/images/format_quote-92edec28f4.svg">
+                <div class="max-sm:h-[60px] flex items-center"> <img
+                    class="lazy logo mb-2 max-sm:mt-2 object-contain entered loaded" alt="northeast.webp Logo"
+                    width="40" height="100" data-ll-status="loaded" src="./assets/images/northeast-bc1097512e.webp">
+                </div>
+                <p class="mb-0 font-light text-base sm:text-xl"> The partnership we've forged with Search Kings has
+                  truly been a game-changer for us. Their expertise and proactive approach have not only enhanced our
+                  online visibility but have also contributed significantly to our overall success. </p>
+                <div class="stars flex items-center"> <span class="material-symbols-outlined">star</span> <span
+                    class="material-symbols-outlined">star</span> <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span> <span
+                    class="material-symbols-outlined">star</span> <span class="ml-2 xs:inline-block hidden">5.0</span>
+                </div>
+                <div class="text-left">
+                  <p class="text-sm sm:text-xl">Richard Dupre</p>
+                  <p class="font-light text-xs sm:text-xl"> Northeast Heating &amp; Cooling </p>
+                </div>
+              </li>
+
+
+
+              <li
+                class="relative w-[300px] max-w-full sm:w-full lg:w-[768px] shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                  alt="Testimonial Quote image" />
+                <div class="max-sm:h-[60px] flex items-center">
+                  <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                    class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                    height="100" />
+                </div>
+                <p class="mb-0 font-light text-base sm:text-xl">
+                  Thanks to your efforts, we've seen noticeable improvements
+                  in various metrics, including click-through rates,
+                  conversions, and overall ROI. It's reassuring to know that
+                  our advertising budget is being managed effectively and
+                  yielding tangible result...
+                </p>
+                <div class="stars flex items-center">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="ml-2 xs:inline-block hidden">5.0</span>
+                </div>
+                <div class="text-left">
+                  <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                  <p class="font-light text-xs sm:text-xl">
+                    Celestial Cleaning
+                  </p>
+                </div>
+              </li>
+              <li
+                class="relative w-[300px] max-w-full sm:w-full lg:w-[768px] shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                  alt="Testimonial Quote image" />
+                <div class="max-sm:h-[60px] flex items-center">
+                  <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                    class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                    height="100" />
+                </div>
+                <p class="mb-0 font-light text-base sm:text-xl">
+                  Thanks to your efforts, we've seen noticeable improvements
+                  in various metrics, including click-through rates,
+                  conversions, and overall ROI. It's reassuring to know that
+                  our advertising budget is being managed effectively and
+                  yielding tangible result...
+                </p>
+                <div class="stars flex items-center">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="ml-2 xs:inline-block hidden">5.0</span>
+                </div>
+                <div class="text-left">
+                  <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                  <p class="font-light text-xs sm:text-xl">
+                    Celestial Cleaning
+                  </p>
+                </div>
+              </li>
+
+              <li role="group"
+                class="relative w-[300px] max-w-full sm:w-full lg:w-[768px] shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                <img class="lazy absolute -top-6 text-black w-16 entered loaded" alt="Testimonial Quote image"
+                  data-ll-status="loaded" src="./assets/images/format_quote-92edec28f4.svg">
+                <div class="max-sm:h-[60px] flex items-center"> <img
+                    class="lazy logo mb-2 max-sm:mt-2 object-contain entered loaded" alt="mrrooter-logo.svg Logo"
+                    width="100" height="100" data-ll-status="loaded" src="./assets/images/mrrooter-logo-80be82291f.svg">
+                </div>
+                <p class="mb-0 font-light text-base sm:text-xl"> SearchKings has had our PPC and LSA business for years
+                  now. They stay up with the latest in technology (thank you Call Intelligence!), address any issues we
+                  have, and are transparent in their pricing. The reports are also just the right amount of in... </p>
+                <div class="stars flex items-center"> <span class="material-symbols-outlined">star</span> <span
+                    class="material-symbols-outlined">star</span> <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span> <span
+                    class="material-symbols-outlined">star</span> <span class="ml-2 xs:inline-block hidden">5.0</span>
+                </div>
+                <div class="text-left">
+                  <p class="text-sm sm:text-xl">Brandy Waugh</p>
+                  <p class="font-light text-xs sm:text-xl"> Mr. Rooter of Amarillo </p>
+                </div>
+              </li>
+
+            </ul>
+
+            <div class="splide__arrows splide__arrows--ltr md:hidden">
+              <button
+                class="splide__arrow--prev !text-[#4a4a4a] !w-5 material-symbols-outlined bg-testimonial-arrow rotate-180 bg-no-repeat bg-cover h-[56px] z-10 lg:hidden absolute top-[64%] translate-y-[-50%] !left-4"
+                aria-label="Previous slide" aria-controls="splide01-track"></button>
+              <button
+                class="splide__arrow--next !text-[#4a4a4a] !w-5 material-symbols-outlined bg-testimonial-arrow bg-no-repeat bg-cover h-[56px] z-10 lg:hidden absolute top-[64%] translate-y-[-50%] !right-4"
+                aria-label="Next slide" aria-controls="splide01-track"></button>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="w-max block mt-4 no-underline shadow-xl rounded-[2rem] !mx-auto">
+          <div
+            class="group md:text-lg text-base text-white font-bold bg-[#4a4a4a] h-full hover:text-white hover:from-black hover:to-black hover:bg-black/90 hover:!border-transparent px-7 py-3 flex items-center gap-2 rounded-[2rem]">
+            <img src="./assets/images/task_alt-07875e2f17.svg" width="24" height="24" alt="task_alt Icon"
+              class="invert group-hover:invert relative" />
+            <span class="tracking-tight">Our Google Reviews<span class="sr-only">Our Google Reviews</span></span>
+          </div>
+        </a>
+      </section>
+      <!--   MOBILE -->
+
+      <section
+        class="block lg:hidden splide section slider-section default-spacing mx-auto flex items-center flex-col splide--loop splide--ltr splide--draggable is-active is-overflow is-initialized">
+        <div class="slider-column w-full m-auto relative">
+          <div class="mx-auto p-12 py-8 pt-0 lg:p-8 lg:pt-0 text-left sm:text-center">
+            <p class="block sm:hidden font-light py-0 md:p-0 tracking-tight">
+              Meet our clients
+            </p>
+            <h2 class="mb-4 text-[24px] md:text-[36px] font-bold">
+              Trusted by 5,000+ customers
+            </h2>
+            <p class="mb-0 md:p-0 py-0 text-[15px] md:text-[20px]">
+              At SearchKings, we take pride in the relationships we have with
+              our customers. <br class="md:content-none content-['_↗']" />We
+              treat every customer like our first.
+            </p>
+          </div>
+
+          <div class="carousel-container">
+            <div class="carousel-wrapper" id="carouselWrapper">
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto    shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#E92C2A] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl text-white">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="ml-2 xs:inline-block hidden text-white">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl text-white">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl text-white">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="ml-2 xs:inline-block hidden">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+
+              <!-- RED  NEON-->
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#E92C2A] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/neon-d708ad3c94.webp" class="lazy logo mb-2 max-sm:mt-2 object-contain"
+                      alt="celestial-cleaning.webp Logo" width="200" height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl text-white">
+                    This is such an amazing company to work with, their team has been very helpful in all the areas of
+                    advertising that we needed help with, they are very professional, quick on getting this done and
+                    have been great with communication. Always a text or ...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="ml-2 xs:inline-block hidden text-white">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl text-white">Lidia Livensov</p>
+                    <p class="font-light text-xs sm:text-xl text-white">
+                      Neon Appliance Repair
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl ">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="ml-2 xs:inline-block hidden">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+
+              <!-- RED -->
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#E92C2A] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/carebuilders-14f1547a27.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="120"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl text-white">
+                    SearchKings has been so helpful and attentive to our business needs. And as a new business owner, I
+                    have a lot of needs. My website and social media accounts have gained much traction since using
+                    SearchKings! We are well on our way to major business...
+
+
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="ml-2 xs:inline-block hidden text-white">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl text-white">Sheila Jones-Lilley</p>
+                    <p class="font-light text-xs sm:text-xl text-white">
+                      CareBuilders at Home
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="ml-2 xs:inline-block hidden">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- RED -->
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#E92C2A] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/mrrooter-logo-80be82291f.svg"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="100"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl text-white">
+                    SearchKings has had our PPC and LSA business for years now. They stay up with the latest in
+                    technology (thank you Call Intelligence!), address any issues we have, and are transparent in their
+                    pricing. The reports are also just the right amount of in...
+
+
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="ml-2 xs:inline-block hidden text-white">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl text-white">Brandy Waugh</p>
+                    <p class="font-light text-xs sm:text-xl text-white">
+                      Mr. Rooter of Amarillo
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="ml-2 xs:inline-block hidden">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- RED -->
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#E92C2A] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/buttons-5213bbb896.svg" class="lazy logo mb-2 max-sm:mt-2 object-contain"
+                      alt="celestial-cleaning.webp Logo" width="150" height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl text-white">
+                    I have been working with SearchKings for over 5 years now and am happy with our results. Being able
+                    to quantify the return on investment is key. Their services are flexible to our changing needs and
+                    our account manager is attentive. Thanks for the g...
+
+
+
+
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="ml-2 xs:inline-block hidden text-white">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl text-white">Renee Taylor</p>
+                    <p class="font-light text-xs sm:text-xl text-white">
+                      Button's Heating & Air Conditioning
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="ml-2 xs:inline-block hidden">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- RED -->
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#E92C2A] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/c&cplumbing-218c342892.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="100"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl text-white">
+                    Since we have signed up two months ago, we have received more service calls. The quality of the
+                    leads is great, and we have recently decided to invest more money into this service and leave other
+                    advertising platforms. The customer service is awesom...
+
+
+
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="ml-2 xs:inline-block hidden text-white">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl text-white">Carlos Calmell</p>
+                    <p class="font-light text-xs sm:text-xl text-white">
+                      C&C Plumbing
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="ml-2 xs:inline-block hidden">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- RED -->
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#E92C2A] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/adaptive-ae6c6295f8.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="100"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl text-white">
+                    Working with SearchKings has been a dream. SearchKings breaks down my monthly spend with in depth
+                    reports and meetings monthly to go over how to most effectively capture leads and with their help
+                    our spend has led to conversions to actual clients. T...
+
+
+
+
+
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="ml-2 xs:inline-block hidden text-white">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl text-white">Ian Sutherland</p>
+                    <p class="font-light text-xs sm:text-xl text-white">
+                      Adaptive Technical Inc.
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="ml-2 xs:inline-block hidden">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <!-- RED -->
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#E92C2A] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/northeast-bc1097512e.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="40"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl text-white">
+                    The partnership we've forged with Search Kings has truly been a game-changer for us. Their expertise
+                    and proactive approach have not only enhanced our online visibility but have also contributed
+                    significantly to our overall success.
+
+
+
+
+
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="material-symbols-outlined text-white">star</span>
+                    <span class="ml-2 xs:inline-block hidden text-white">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl text-white">Richard Dupre</p>
+                    <p class="font-light text-xs sm:text-xl text-white">
+                      Northeast Heating & Cooling
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="carousel-item ">
+                <li
+                  class="relative w-[300px] max-w-full xs:w-[85%] sm:w-[90%] xs:mx-auto shrink-0 !flex flex-col items-baseline text-container font-light text-xl mb-4 md:p-16 md:py-12 rounded-2xl mt-8 m-auto text-left md:gap-4 gap-3 transition-all h-auto p-8 bg-[#f8f8f8] md:min-h-[436px] min-h-[310px]">
+                  <img src="./assets/images/format_quote-92edec28f4.svg" class="lazy absolute -top-6 text-black w-16"
+                    alt="Testimonial Quote image" />
+                  <div class="max-sm:h-[60px] flex items-center">
+                    <img src="./assets/images/celestial-cleaning-ae7b752962.webp"
+                      class="lazy logo mb-2 max-sm:mt-2 object-contain" alt="celestial-cleaning.webp Logo" width="60"
+                      height="100" />
+                  </div>
+                  <p class="mb-0 font-light text-base sm:text-xl">
+                    Thanks to your efforts, we've seen noticeable improvements
+                    in various metrics, including click-through rates,
+                    conversions, and overall ROI. It's reassuring to know that
+                    our advertising budget is being managed effectively and
+                    yielding tangible result...
+                  </p>
+                  <div class="stars flex items-center">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="ml-2 xs:inline-block hidden">5.0</span>
+                  </div>
+                  <div class="text-left">
+                    <p class="text-sm sm:text-xl">Derlens Pierre</p>
+                    <p class="font-light text-xs sm:text-xl">
+                      Celestial Cleaning
+                    </p>
+                  </div>
+                </li>
+              </div>
+
+            </div>
+
+            <div
+              class="carousel-arrow left-arrow !text-[#4a4a4a] !w-5 material-symbols-outlined bg-testimonial-arrow rotate-180 bg-no-repeat bg-cover h-[56px] z-10 lg:hidden absolute  !translate-y-[-40%] !left-[10px]"
+              onclick="changeSlide(-2)">
+
+            </div>
+            <div
+              class="carousel-arrow right-arrow !text-[#4a4a4a] !w-5 material-symbols-outlined bg-testimonial-arrow  bg-no-repeat bg-cover h-[56px] z-10 lg:hidden absolute  !translate-y-[-40%] !right-[10px]"
+              onclick="changeSlide(2)">
+
+            </div>
+
+          </div>
+          <a href="#" class="w-max block mt-4 no-underline shadow-xl rounded-[2rem] !mx-auto">
+            <div
+              class="group md:text-lg text-base text-white font-bold bg-[#4a4a4a] h-full hover:text-white hover:from-black hover:to-black hover:bg-black/90 hover:!border-transparent px-7 py-3 flex items-center gap-2 rounded-[2rem]">
+              <img src="./assets/images/task_alt-07875e2f17.svg" width="24" height="24" alt="task_alt Icon"
+                class="invert group-hover:invert relative" />
+              <span class="tracking-tight">Our Google Reviews<span class="sr-only">Our Google Reviews</span></span>
+            </div>
+          </a>
+      </section>
+
+      <section class="flex items-center y-[3rem]">
+        <div class="container px-12 2xl:px-0 flex justify-center items-center mx-auto 2xl:max-w-[1320px]">
+          <div class="flex flex-col lg:flex-row justify-center items-center md:p-8 lg:p-0 rounded-3xl">
+            <div class="w-full lg:w-1/3 p-0 pb-8 lg:p-12">
+              <h2 class="mb-4 lg:mb-8 text-[36px] font-bold">
+                Getting started <span class="lg:block">is easy</span>
+              </h2>
+              <p class="mb-4 text-[20px]">
+                We simplify lead generation so you can focus on growing your
+                business.
+              </p>
+              <p class="mb-4 text-[20px]">
+                This is why our digital marketing experts make every effort to
+                ensure a smooth and simple onboarding experience and stellar
+                results.
+              </p>
+              <p class="mb-8 text-[20px]">
+                Make the switch to SearchKings today.
+              </p>
+              <a href="/contact/"
+                class="w-max block mt-4 no-underline shadow-xl rounded-[2rem] bg-gradient-to-r from-[#da1c1c] to-[#ee312f] rounded-full">
+                <div
+                  class="group md:text-lg text-base text-white font-bold h-full hover:text-white hover:from-black hover:to-black hover:bg-black/90 hover:!border-transparent px-7 py-3 flex items-center gap-2 rounded-[2rem]">
+                  <span class="tracking-tight">Get Started<span class="sr-only">Get Started</span></span>
+                  <img src="./assets/images/arrow_outward-87ed9f5456.svg" width="24" height="24"
+                    alt="arrow_outward Icon" class="invert group-hover:invert relative" />
+                </div>
+              </a>
+            </div>
+            <div class="w-full lg:w-2/3 icon-wrapper grid grid-cols-1 sm:grid-cols-2 gap-16 p-0 lg:p-12">
+              <div class="md:block flex flex-col gap-2 items-start">
+                <img class="lazy entered loaded" alt="Contact Us" width="53" height="52" data-ll-status="loaded"
+                  src="./assets/images/contact-us-d640acc1d7.webp" />
+                <div class="pt-4">
+                  <p class="text-xl lg:text-3xl font-bold mb-2">Contact Us</p>
+                  <p class="font-light">
+                    At SearchKings, we specialize in managing digital
+                    campaigns. Our team of professionals is here to help.
+                  </p>
+                </div>
+              </div>
+              <div class="md:block flex flex-col gap-2 items-start">
+                <img class="lazy entered loaded" alt="Onboard" width="53" height="52" data-ll-status="loaded"
+                  src="./assets/images/onboard-bb9a4c8d2a.webp" />
+                <div class="pt-4">
+                  <p class="text-xl lg:text-3xl font-bold mb-2">Onboard</p>
+                  <p class="font-light">
+                    We handle Google &amp; Microsoft’s onboarding process for
+                    you and get your accounts live faster.
+                  </p>
+                </div>
+              </div>
+              <div class="md:block flex flex-col gap-2 items-start">
+                <img class="lazy entered loaded" alt="Optimize" width="53" height="52" data-ll-status="loaded"
+                  src="./assets/images/optimize-7c1d4c1705.webp" />
+                <div class="pt-4">
+                  <p class="text-xl lg:text-3xl font-bold mb-2">Optimize</p>
+                  <p class="font-light">
+                    Your dedicated Account Manager continually optimizes lead
+                    volume and budget to best suit you.
+                  </p>
+                </div>
+              </div>
+              <div class="md:block flex flex-col gap-2 items-start">
+                <img class="lazy entered loaded" alt="Support" width="53" height="52" data-ll-status="loaded"
+                  src="./assets/images/support-1603e96320.webp" />
+                <div class="pt-4">
+                  <p class="text-xl lg:text-3xl font-bold mb-2">Support</p>
+                  <p class="font-light">
+                    In addition to our dedicated support line, we train you on
+                    how to view and action your leads and more.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-[3rem] splide default-spacing splide--slide splide--ltr splide--draggable is-active is-initialized">
+        <div class="relative container px-[15px] mx-auto 2xl:max-w-[1320px]">
+          <div class="px-12 2xl:px-0">
+            <div class="">
+              <ul class="flex md:justify-center overflow-hidden overflow-x-auto" id="sliderrr">
+                <li
+                  class="shrink-0 flex flex-col justify-center items-start sm:items-center text-container font-light text-2xl text-left sm:text-center lg:ml-0 md:mr-0 splide__slide md:w-[240px] is-visible">
+                  <div class="min-h-[85px] flex items-center pl-5">
+                    <img class="shadow-2xl w-[130px]" alt="Microsoft Elite Partner Badge"
+                      src="./assets/images/awards-elite-partner-d41434c5d3.webp" width="100" height="100"
+                      style="width: auto; height: auto" />
+                  </div>
+                  <p
+                    class="text-base sm:text-xl font-normal leading-tight mb-2 mt-2 tracking-tight max-w-[140px] sm:max-w-[170px] min-h-[50px]">
+                    Microsoft Elite Partner
+                  </p>
+                  <p class="text-xs sm:text-sm tracking-tight leading-tight max-w-[140px] sm:max-w-[170px]">
+                    Microsoft Advertising Certified Professionals.
+                  </p>
+                </li>
+                <li
+                  class="shrink-0 flex flex-col justify-center items-start sm:items-center text-container font-light text-2xl justify-center items-center text-left sm:text-center lg:ml-0 md:mr-0 splide__slide md:w-[240px] is-visible">
+                  <div class="min-h-[85px] flex items-center pl-5">
+                    <img class="shadow-2xl w-[130px]" alt="Google Premier Partner"
+                      src="./assets/images/awards-google-partner-d8c592140b.webp" width="100" height="100"
+                      style="width: auto; height: auto" />
+                  </div>
+                  <p
+                    class="text-base sm:text-xl font-normal leading-tight mb-2 mt-2 tracking-tight max-w-[140px] sm:max-w-[170px] min-h-[50px]">
+                    Google Premier Partner
+                  </p>
+                  <p class="text-xs sm:text-sm tracking-tight leading-tight max-w-[140px] sm:max-w-[170px]">
+                    Top-performing Google Premier Partner since 2012.
+                  </p>
+                </li>
+                <li
+                  class="shrink-0 flex flex-col justify-center items-start sm:items-center text-container font-light text-2xl text-left sm:text-center lg:ml-0 md:mr-0 splide__slide md:w-[240px] is-visible">
+                  <div class="min-h-[85px] flex items-center pl-5">
+                    <img class="shadow-2xl w-[130px]" alt="Google Customer Satisfaction Award"
+                      src="./assets/images/awards-google-customer-satisfaction-d117614e51.webp" width="100" height="100"
+                      style="width: auto; height: auto" />
+                  </div>
+                  <p
+                    class="text-base sm:text-xl font-normal leading-tight mb-2 mt-2 tracking-tight max-w-[140px] sm:max-w-[170px] min-h-[50px]">
+                    Google Customer Satisfaction Award
+                  </p>
+                  <p class="text-xs sm:text-sm tracking-tight leading-tight max-w-[140px] sm:max-w-[170px]">
+                    Delivering outstanding results to our clients since 2009.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-white shadow-top lg:py-16 py-8 lg:pb-8 flex flex-col justify-center text-[#3e4543]">
+        <div
+          class="xl:container px-12 flex lg:justify-between justify-center flex-col lg:flex-row gap-y-4 2xl:max-w-[1380px] mx-auto">
+          <div class="lg:w-1/4 w-full sm:block hidden order-3">
+            <p class="flex-auto w-full text-3xl pt-2 py-2 px-0">About Us</p>
+            <div class="flex lg:flex-col max-lg:flex-wrap gap-x-8 lg:gap-x-4 gap-y-0">
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Achievements
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Testimonials
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Join Our Team
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="./about-us.html" class="xl:text-base hover:underline"> About Us </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline"> Podcasts </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="py-4 pr-4 xl:text-base hover:underline">
+                  Case Studies
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/4 w-full sm:block hidden order-1">
+            <p class="flex-auto w-full text-3xl pt-2 py-2 px-0">Services</p>
+            <div class="flex lg:flex-col max-lg:flex-wrap gap-x-8 lg:gap-x-4 gap-y-0">
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Ads Management
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Call Intelligence
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Local Services Ads
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="./ecommerce.html" class="xl:text-base hover:underline">
+                  eCommerce
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Video Marketing
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Web Services
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/4 w-full sm:block hidden order-2">
+            <p class="flex-auto w-full text-3xl pt-2 py-2 px-0">Solutions</p>
+            <div class="flex lg:flex-col max-lg:flex-wrap gap-x-8 lg:gap-x-4 gap-y-0">
+              <div class="p-4 px-0">
+                <a href="./plans.html" class="xl:text-base hover:underline">
+                  Plans &amp; Pricing
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Partners &amp; Franchises
+                </a>
+              </div>
+              <div class="p-4 px-0">
+                <a href="" class="xl:text-base hover:underline">
+                  Web Hosting &amp; Maintenance
+                </a>
+              </div>
+              <div class="p-4 px-0 pr-32 lg:pr-0 hidden lg:block">
+                <p class="text-base font-bold text-[#4a4a4a] pb-2">
+                  Download our App
+                </p>
+                <div class="flex gap-2">
+                  <img class="lazy entered loaded" width="65" height="65" alt="SearchKings App Logo"
+                    data-ll-status="loaded" src="./assets/images/app-logo-f8a74c2503.svg" />
+                  <div class="flex flex-col gap-1 items-center justify-center">
+                    <a href="#">
+                      <img class="lazy h-full entered loaded" width="92" height="92" alt="SearchKings App Download ios"
+                        data-ll-status="loaded" src="./assets/images/app-ios-6b6ad68583.svg" />
+                    </a>
+                    <a href="#">
+                      <img class="lazy h-full entered loaded" width="92" height="92"
+                        alt="SearchKings App Download Android" data-ll-status="loaded"
+                        src="./assets/images/app-android-8cbe1e3d22.svg" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/4 flex flex-col lg:mr-0 w-full order-4">
+            <p class="text-3xl py-3 tracking-tight">Contact Us</p>
+            <div
+              class="flex flex-wrap lg:flex-nowrap lg:block pb-6 pt-0 lg:pb-0 lg:pt-0 lg:justify-between justify-start md:gap-0 gap-8 lg:flex-row flex-col items-start">
+              <div>
+                <p class="lg:pt-2 text-[16px] lg:leading-normal leading-10">
+                  <a href="tel:1-888-335-4647">Toll-free:
+                    <span class="underline">1 (888) 335-4647</span></a>
+                </p>
+                <p class="text-[16px] lg:leading-normal leading-10">
+                  <a href="tel:(416) 913-1279">Toronto: <span class="underline">(416) 913-1279</span></a>
+                </p>
+                <p class="text-[16px] lg:leading-normal leading-10">
+                  <a href="tel:1 (888) 693-1279">Text Us:
+                    <span class="underline">1 (888) 693-1279</span></a>
+                </p>
+              </div>
+              <p class="lg:py-8 leading-6 !pb-0 text-[16px]">
+                Toronto: 4051 Gordon Baker Rd. Unit B, Scarborough, ON M1W 2P3
+              </p>
+              <p class="lg:py-8 leading-6 text-[16px]">
+                Vancouver: 3602 Gilmore Way, Burnaby Unit, BC V5G 4W7
+              </p>
+            </div>
+            <div class="flex flex-wrap flex-auto items-baseline gap-4"> <img
+                class="lazy mx-2 ml-0 w-24 shadow-lg entered loaded" alt="Google Premiere Partner Badge" width="96"
+                height="95" data-ll-status="loaded" src="./assets/images/premier-google-partner-2024-f602a8e02a.svg">
+              <img class="lazy mx-2 ml-0 w-40 shadow-lg entered loaded" alt="Microsoft Badge" width="160" height="55"
+                data-ll-status="loaded" src="./assets/images/ms-elite-partner-badge-2024-a124d4f97b.svg">
+            </div>
+          </div>
+        </div>
+        <small class="xl:container mx-auto 2xl:max-w-[1380px] px-12 block pt-8 text-left w-full">
+          © <a href="/" title="SearchKings">SearchKings</a> 2024 |
+          <a href="#" class="underline">Terms &amp; Conditions</a> |
+          <a href="#" class="underline">Privacy Policy</a> |
+          <a href="https://support.google.com/adspolicy/answer/94230?hl=en" class="underline">Working With 3rd
+            Parties</a>
+          |
+          <a href="/accessibility-plans" class="underline">Accessibility Plan</a></small>
+        <div class="xl:container mx-auto 2xl:max-w-[1380px] px-12 pt-4">
+          <div class="p-4 px-0 pr-32 lg:pr-0 lg:hidden">
+            <p class="text-base font-bold text-brandGray pb-2">
+              Download our App
+            </p>
+            <div class="flex gap-2">
+              <img class="lazy entered loaded" width="65" height="65" alt="SearchKings App Logo" data-ll-status="loaded"
+                src="./assets/images/app-logo-f8a74c2503.svg" />
+              <div class="flex flex-col gap-1 items-center justify-center">
+                <a href="https://apps.apple.com/ca/app/searchkings/id6502098946">
+                  <img class="lazy h-full entered loaded" width="92" height="92" alt="SearchKings App Download ios"
+                    data-ll-status="loaded" src="./assets/images/app-ios-6b6ad68583.svg" />
+                </a>
+                <a href="https://play.google.com/store/search?q=Searchkings&amp;c=apps&amp;hl=en">
+                  <img class="lazy h-full entered loaded" width="92" height="92" alt="SearchKings App Download Android"
+                    data-ll-status="loaded" src="./assets/images/app-android-8cbe1e3d22.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <div class="fixed bottom-5 right-4 z-[9999999999] font-normal drop-shadow-lg sm:bottom-7 sm:right-6">
+    <div class="relative -mr-1 mb-[20px] hidden">
+      <div
+        class="bg-primary from-gradient-red-top to-gradient-red-bottom rounded-t-lg bg-gradient-to-t p-2.5 text-base font-medium text-white sm:p-4">
+        <div class="-ml-3 flex flex-row items-center justify-center gap-x-2">
+          <!---->
+          <div
+            class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white sm:h-10 sm:w-10 p-2">
+            <img class="w-full"
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTUiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NSA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjk1ODMgNDQuMjVDMTMuMTkwOSA0NC4yNSAxMi41NDc3IDQzLjk5MDQgMTIuMDI4NiA0My40NzEzQzExLjUwOTUgNDIuOTUyMiAxMS4yNSA0Mi4zMDkgMTEuMjUgNDEuNTQxNlYzNi4xMjVINDYuNDU4M1YxMS43NUg1MS44NzVDNTIuNjQyMyAxMS43NSA1My4yODU2IDEyLjAwOTUgNTMuODA0NiAxMi41Mjg2QzU0LjMyMzcgMTMuMDQ3NyA1NC41ODMzIDEzLjY5MDkgNTQuNTgzMyAxNC40NTgzVjU1LjA4MzNMNDMuNzUgNDQuMjVIMTMuOTU4M1pNMC40MTY2MjYgNDEuNTQxNlYzLjYyNDk2QzAuNDE2NjI2IDIuODU3NiAwLjY3NjE3NSAyLjIxNDM3IDEuMTk1MjcgMS42OTUyN0MxLjcxNDM3IDEuMTc2MTcgMi4zNTc2IDAuOTE2NjI2IDMuMTI0OTYgMC45MTY2MjZIMzguMzMzM0MzOS4xMDA3IDAuOTE2NjI2IDM5Ljc0MzkgMS4xNzYxNyA0MC4yNjMgMS42OTUyN0M0MC43ODIxIDIuMjE0MzcgNDEuMDQxNiAyLjg1NzYgNDEuMDQxNiAzLjYyNDk2VjI4QzQxLjA0MTYgMjguNzY3MyA0MC43ODIxIDI5LjQxMDYgNDAuMjYzIDI5LjkyOTZDMzkuNzQzOSAzMC40NDg3IDM5LjEwMDcgMzAuNzA4MyAzOC4zMzMzIDMwLjcwODNIMTEuMjVMMC40MTY2MjYgNDEuNTQxNloiIGZpbGw9IiMzRTQ1NDMiLz4KPC9zdmc+Cg=="
+              alt="SearchKings Chat" />
+          </div>
+          <!----><!----><!----><!----><!----><!----><!---->
+          Need help? Text us.
+          <!---->
+        </div>
+        <!---->
+      </div>
+      <div class="convo-wrapper">
+        <div
+          class="flex max-h-[435px] min-h-[400px] flex-col gap-y-4 overflow-y-auto p-4 sm:max-h-[560px] sm:gap-y-6 sm:p-5">
+          <div class="flex flex-1 flex-col gap-y-4 sm:gap-y-5">
+            <!----><!----><!----><!---->
+          </div>
+          <div class="text-[11px] tracking-wide">© 2024 SearchKings</div>
+        </div>
+      </div>
+    </div>
+    <!----><button type="button"
+      class="float-right cursor-not-allowed overflow-hidden rounded-full bg-gray-500 p-1.5 text-center text-white shadow-md focus:outline-none sm:p-2 animate-fade group cursor-pointer bg-gray-700 hover:bg-gray-800">
+      <div class="flex flex-row items-center justify-center">
+        <div class="relative h-8 w-8 sm:h-10 sm:w-10">
+          <div
+            class="absolute -translate-y-full opacity-0 transition-all delay-500 duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+            <div
+              class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white sm:h-10 sm:w-10 p-2">
+              <img class="w-full"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTUiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NSA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjk1ODMgNDQuMjVDMTMuMTkwOSA0NC4yNSAxMi41NDc3IDQzLjk5MDQgMTIuMDI4NiA0My40NzEzQzExLjUwOTUgNDIuOTUyMiAxMS4yNSA0Mi4zMDkgMTEuMjUgNDEuNTQxNlYzNi4xMjVINDYuNDU4M1YxMS43NUg1MS44NzVDNTIuNjQyMyAxMS43NSA1My4yODU2IDEyLjAwOTUgNTMuODA0NiAxMi41Mjg2QzU0LjMyMzcgMTMuMDQ3NyA1NC41ODMzIDEzLjY5MDkgNTQuNTgzMyAxNC40NTgzVjU1LjA4MzNMNDMuNzUgNDQuMjVIMTMuOTU4M1pNMC40MTY2MjYgNDEuNTQxNlYzLjYyNDk2QzAuNDE2NjI2IDIuODU3NiAwLjY3NjE3NSAyLjIxNDM3IDEuMTk1MjcgMS42OTUyN0MxLjcxNDM3IDEuMTc2MTcgMi4zNTc2IDAuOTE2NjI2IDMuMTI0OTYgMC45MTY2MjZIMzguMzMzM0MzOS4xMDA3IDAuOTE2NjI2IDM5Ljc0MzkgMS4xNzYxNyA0MC4yNjMgMS42OTUyN0M0MC43ODIxIDIuMjE0MzcgNDEuMDQxNiAyLjg1NzYgNDEuMDQxNiAzLjYyNDk2VjI4QzQxLjA0MTYgMjguNzY3MyA0MC43ODIxIDI5LjQxMDYgNDAuMjYzIDI5LjkyOTZDMzkuNzQzOSAzMC40NDg3IDM5LjEwMDcgMzAuNzA4MyAzOC4zMzMzIDMwLjcwODNIMTEuMjVMMC40MTY2MjYgNDEuNTQxNloiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl8xXzcpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMV83IiB4MT0iNTQuNTgzMyIgeTE9IjAuOTE2NjI2IiB4Mj0iMjcuMTUzIiB5Mj0iNjYuMyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjRkZCRDAxIi8+CjxzdG9wIG9mZnNldD0iMC44MDIwODMiIHN0b3AtY29sb3I9IiNGRkEzMDEiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K"
+                alt="SearchKings Chat" />
+            </div>
+            <!----><!---->
+          </div>
+          <div
+            class="absolute translate-y-0 opacity-100 transition-all delay-500 duration-300 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+            <div
+              class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white sm:h-10 sm:w-10 p-2">
+              <img class="w-full"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMzIiBoZWlnaHQ9IjExOSIgdmlld0JveD0iMCAwIDEzMyAxMTkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF83ODI5XzI5MTA0KSI+CjxwYXRoIGQ9Ik0wIDkxLjkzMDJWOTcuMjM4OEMwIDEwOS4yNTcgMjkuNzY2NSAxMTkgNjYuNDg3MiAxMTlINjYuNTEyOEMxMDMuMjMzIDExOSAxMzMgMTA5LjI1NyAxMzMgOTcuMjM4OFY5MS45MzAyQzEyMC4zNDkgMTAyLjIzOSA5NS41ODY1IDEwOS4wOSA2Ni41MTI4IDEwOS4wOUMzNy40MzkxIDEwOS4wOSAxMi42NTA4IDEwMi4yMzkgMCA5MS45MzAyWiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzc4MjlfMjkxMDQpIi8+CjxwYXRoIGQ9Ik02Ni40ODcyIDEwNS43ODZDOTUuODk0NSAxMDUuNzg2IDEyMS44NzYgOTguMDg3IDEzMi45NzQgODcuNDA1NVYxMi4yODgyTDEzMi45MzYgMTIuMzM5NlYxMi4yODgyTDEwMi4xMyA1NS45MjY3TDExMS43MTQgNzIuNTcyM0wxMDkuNjIzIDc1LjUyODZMOTkuMDI1MSA1Ny4xMjIxTDk5LjA3NjQgNTcuMDU3OEw2Ni41MTI4IDBMNjYuNDg3MiAwLjAzODU2MTJMMzMuOTg3NyA1Ny4xMjIxTDIzLjM2NDIgNzUuNThMMjEuMjYgNzIuNTcyM0wzMC44NDQzIDU1LjkyNjdMMC4wMzg0OTEyIDEyLjI4ODJWNzIuOTcwN0gwVjg3LjM5MjZDMTEuMDk4MyA5OC4wODY5IDM3LjA3OTkgMTA1Ljc4NiA2Ni40ODcyIDEwNS43ODZaIiBmaWxsPSJ1cmwoI3BhaW50MV9saW5lYXJfNzgyOV8yOTEwNCkiLz4KPC9nPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzc4MjlfMjkxMDQiIHgxPSIwIiB5MT0iMTA1LjQ2NSIgeDI9IjEzMyIgeTI9IjEwNS40NjUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0ZGQTMwMCIvPgo8c3RvcCBvZmZzZXQ9IjAuOTkiIHN0b3AtY29sb3I9IiNGRkJEMDAiLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDFfbGluZWFyXzc4MjlfMjkxMDQiIHgxPSIwIiB5MT0iNTIuODkzMiIgeDI9IjEzMi45NzQiIHkyPSI1Mi44OTMyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkEzMDAiLz4KPHN0b3Agb2Zmc2V0PSIwLjk5IiBzdG9wLWNvbG9yPSIjRkZCRDAwIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxjbGlwUGF0aCBpZD0iY2xpcDBfNzgyOV8yOTEwNCI+CjxyZWN0IHdpZHRoPSIxMzMiIGhlaWdodD0iMTE5IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="
+                alt="SearchKings Crown" />
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div class="px-2 text-sm sm:text-[16px]">
+          <span class="font-bold">Text</span> Our Experts
+        </div>
+      </div>
+      <!----><!---->
+    </button><!---->
+  </div>
+
+  <script src="./assets/js/home.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

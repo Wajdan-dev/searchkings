@@ -1,0 +1,2063 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "Satoshi";
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Variable.ttf") format("woff2");
+}
+
+.bg-hero-circle {
+  background-image: url("../images/bg-circle-1d771f42e9.webp");
+}
+
+.shadow-3xl {
+  --tw-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0px 20px 30px var(--tw-shadow-color);
+}
+
+.shadow-2xl,
+.shadow-3xl {
+  box-shadow: var(0 0 #0000, 0 0 #0000), var(0 0 #0000, 0 0 #0000),
+    var(--tw-shadow);
+}
+
+.xl\:bg-hero-about {
+  background-image: url("../images/bg-about-0468074000.webp");
+}
+.xl\:bg-hero-streamline {
+  background-image: url(../images/bg-streamline-71d75adf60.webp);
+}
+.xl\:bg-hero-ci {
+  background-image: url(../images/bg-ci-44f6d44cfd.webp);
+}
+
+.splide__list {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  list-style: none;
+  display: flex;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.shadow-top {
+  box-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 -4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+.rotate-90 {
+  transform: rotate(90deg);
+}
+.rotate-0 {
+  transform: rotate(0deg);
+}
+.default-spacing {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.contact {
+  grid-template-areas:
+    "name inquiry"
+    "phone source"
+    "email message"
+    "cname message"
+    "website message";
+}
+
+.contact > div {
+  position: relative;
+  text-align: left;
+}
+
+.slider-section .splide__list .is-active {
+  background: #ee312f;
+  color: white;
+}
+
+.splide__list {
+  transition: transform 0.5s ease-in-out; /* Adjust as needed */
+}
+
+.contact > div label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact > div input:not(.iti__tel-input),
+.contact > div select,
+.contact > div textarea {
+  padding-left: 0.5rem;
+}
+
+.contact > div input,
+.contact > div select,
+.contact > div textarea {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  width: 100%;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  font-size: 13px;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+/* country code  */
+
+.iti {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.iti--allow-dropdown .iti__flag-container,
+.iti--show-selected-dial-code .iti__flag-container {
+  left: 0;
+  right: auto;
+}
+.iti__flag-container {
+  bottom: 0;
+  padding: 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.iti__selected-flag {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 6px 0 8px;
+  cursor: pointer;
+}
+
+.iti__flag {
+  /* background-image: url(../img/flags.png?1);
+    background-position: 20px 0; */
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 0 1px 0 #888;
+  box-shadow: 0 0 1px 0 #888;
+  height: 15px;
+}
+.iti__flag {
+  width: 20px;
+}
+.iti__arrow {
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 4px solid #555;
+  height: 0;
+  margin-left: 6px;
+  width: 0;
+}
+
+.iti--allow-dropdown input.iti__tel-input,
+.iti--allow-dropdown input.iti__tel-input[type="tel"],
+.iti--allow-dropdown input.iti__tel-input[type="text"],
+.iti--show-selected-dial-code input.iti__tel-input,
+.iti--show-selected-dial-code input.iti__tel-input[type="tel"],
+.iti--show-selected-dial-code input.iti__tel-input[type="text"] {
+  margin-left: 0;
+  padding-left: 52px;
+  padding-right: 6px;
+}
+.iti--inline-dropdown .iti__dropdown-content {
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  margin-left: -1px;
+  margin-top: 3px;
+  position: absolute;
+  z-index: 2;
+}
+
+.iti__dropdown-content {
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.iti__hide {
+  display: none;
+}
+
+.iti--inline-dropdown .iti__country-list {
+  max-height: 185px;
+}
+.iti__search-input + .iti__country-list {
+  border-top: 1px solid #ccc;
+}
+.iti__country-list {
+  list-style: none;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+.iti__country {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.iti__flag-box {
+  display: inline-block;
+  width: 20px;
+}
+
+.iti__country-name,
+.iti__flag-box {
+  margin-right: 8px;
+}
+.iti__dial-code {
+  color: #999;
+}
+
+/* flage image postion  */
+
+.iti__flag.iti__us {
+  background-position: -5373px 0;
+  height: 11px;
+}
+.iti__flag {
+  background-image: url(../images/flags-2f919de769.webp);
+}
+
+.iti__flag.iti__ac {
+  background-position: 0 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ad {
+  background-position: -22px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ae {
+  background-position: -44px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__af {
+  background-position: -66px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ag {
+  background-position: -88px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ai {
+  background-position: -110px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__al {
+  background-position: -132px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__am {
+  background-position: -154px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ao {
+  background-position: -176px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__aq {
+  background-position: -198px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ar {
+  background-position: -220px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__as {
+  background-position: -242px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__at {
+  background-position: -264px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__au {
+  background-position: -286px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__aw {
+  background-position: -308px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ax {
+  background-position: -330px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__az {
+  background-position: -352px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ba {
+  background-position: -374px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__bb {
+  background-position: -396px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__bd {
+  background-position: -418px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__be {
+  background-position: -440px 0;
+  height: 15px;
+}
+
+@media (min-width: 769px) {
+  .post .contact > div div.iti ~ .text-help,
+  .post .contact > div input:not(input[type="file"]) ~ .text-help,
+  .post .contact > div select ~ .text-help {
+    border-radius: 0.375rem;
+    bottom: -0.75rem;
+    left: 0.75rem;
+    position: absolute;
+    z-index: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+.post .contact > div div.iti ~ .text-help,
+.post .contact > div input:not(input[type="file"]) ~ .text-help,
+.post .contact > div select ~ .text-help {
+  text-align: left;
+}
+
+.text-error:before {
+  content: "release_alert";
+  font-family: Material Symbols Outlined, Arial, sans-serif;
+  margin-right: 5px;
+}
+.text-error {
+  font-size: 12px;
+  font-weight: 600;
+}
+.post .contact > div .text-help {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.iti__flag.iti__bf {
+  background-position: -460px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__bg {
+  background-position: -482px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__bh {
+  background-position: -504px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__bi {
+  background-position: -526px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__bj {
+  background-position: -548px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__bl {
+  background-position: -570px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__bm {
+  background-position: -592px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__bn {
+  background-position: -614px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__bo {
+  background-position: -636px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__bq {
+  background-position: -658px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__br {
+  background-position: -680px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__bs {
+  background-position: -702px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__bt {
+  background-position: -724px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__bv {
+  background-position: -746px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__bw {
+  background-position: -768px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__by {
+  background-position: -790px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__bz {
+  background-position: -812px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__ca {
+  background-position: -834px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__cc {
+  background-position: -856px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__cd {
+  background-position: -878px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__cf {
+  background-position: -900px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__cg {
+  background-position: -922px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ch {
+  background-position: -944px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__ci {
+  background-position: -961px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ck {
+  background-position: -983px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__cl {
+  background-position: -1005px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__cm {
+  background-position: -1027px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__cn {
+  background-position: -1049px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__co {
+  background-position: -1071px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__cp {
+  background-position: -1093px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__cq {
+  background-position: -1115px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__cr {
+  background-position: -1137px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__cu {
+  background-position: -1159px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__cv {
+  background-position: -1181px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__cw {
+  background-position: -1203px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__cx {
+  background-position: -1225px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__cy {
+  background-position: -1247px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__cz {
+  background-position: -1269px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__de {
+  background-position: -1291px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__dg {
+  background-position: -1313px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__dj {
+  background-position: -1335px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__dk {
+  background-position: -1357px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__dm {
+  background-position: -1379px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__do {
+  background-position: -1401px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__dz {
+  background-position: -1423px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ea {
+  background-position: -1445px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ec {
+  background-position: -1467px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ee {
+  background-position: -1489px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__eg {
+  background-position: -1511px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__eh {
+  background-position: -1533px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__er {
+  background-position: -1555px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__es {
+  background-position: -1577px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__et {
+  background-position: -1599px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__eu {
+  background-position: -1621px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ez {
+  background-position: -1643px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__fi {
+  background-position: -1665px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__fj {
+  background-position: -1687px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__fk {
+  background-position: -1709px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__fm {
+  background-position: -1731px 0;
+  height: 11px;
+}
+
+.iti__flag.iti__fo {
+  background-position: -1753px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__fr {
+  background-position: -1775px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__fx {
+  background-position: -1797px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ga {
+  background-position: -1819px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__gb {
+  background-position: -1841px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__gd {
+  background-position: -1863px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__ge {
+  background-position: -1885px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gf {
+  background-position: -1907px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gg {
+  background-position: -1929px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gh {
+  background-position: -1951px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gi {
+  background-position: -1973px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__gl {
+  background-position: -1995px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gm {
+  background-position: -2017px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gn {
+  background-position: -2039px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gp {
+  background-position: -2061px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gq {
+  background-position: -2083px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gr {
+  background-position: -2105px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__gs {
+  background-position: -2127px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__gt {
+  background-position: -2149px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__gu {
+  background-position: -2171px 0;
+  height: 11px;
+}
+
+.iti__flag.iti__gw {
+  background-position: -2193px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__gy {
+  background-position: -2215px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__hk {
+  background-position: -2237px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__hm {
+  background-position: -2259px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__hn {
+  background-position: -2281px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__hr {
+  background-position: -2303px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ht {
+  background-position: -2325px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__hu {
+  background-position: -2347px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ic {
+  background-position: -2369px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__id {
+  background-position: -2391px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ie {
+  background-position: -2413px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__il {
+  background-position: -2435px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__im {
+  background-position: -2457px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__in {
+  background-position: -2479px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__io {
+  background-position: -2501px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__iq {
+  background-position: -2523px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ir {
+  background-position: -2545px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__is {
+  background-position: -2567px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__it {
+  background-position: -2589px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__je {
+  background-position: -2611px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__jm {
+  background-position: -2633px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__jo {
+  background-position: -2655px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__jp {
+  background-position: -2677px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ke {
+  background-position: -2699px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__kg {
+  background-position: -2721px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__kh {
+  background-position: -2743px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__ki {
+  background-position: -2765px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__km {
+  background-position: -2787px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__kn {
+  background-position: -2809px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__kp {
+  background-position: -2831px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__kr {
+  background-position: -2853px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__kw {
+  background-position: -2875px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ky {
+  background-position: -2897px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__kz {
+  background-position: -2919px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__la {
+  background-position: -2941px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__lb {
+  background-position: -2963px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__lc {
+  background-position: -2985px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__li {
+  background-position: -3007px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__lk {
+  background-position: -3029px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__lr {
+  background-position: -3051px 0;
+  height: 11px;
+}
+
+.iti__flag.iti__ls {
+  background-position: -3073px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__lt {
+  background-position: -3095px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__lu {
+  background-position: -3117px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__lv {
+  background-position: -3139px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ly {
+  background-position: -3161px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ma {
+  background-position: -3183px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mc {
+  background-position: -3205px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__md {
+  background-position: -3226px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__me {
+  background-position: -3248px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__mf {
+  background-position: -3270px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mg {
+  background-position: -3292px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mh {
+  background-position: -3314px 0;
+  height: 11px;
+}
+
+.iti__flag.iti__mk {
+  background-position: -3336px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ml {
+  background-position: -3358px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mm {
+  background-position: -3380px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mn {
+  background-position: -3402px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__mo {
+  background-position: -3424px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mp {
+  background-position: -3446px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__mq {
+  background-position: -3468px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mr {
+  background-position: -3490px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ms {
+  background-position: -3512px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__mt {
+  background-position: -3534px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mu {
+  background-position: -3556px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mv {
+  background-position: -3578px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mw {
+  background-position: -3600px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__mx {
+  background-position: -3622px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__my {
+  background-position: -3644px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__mz {
+  background-position: -3666px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__na {
+  background-position: -3688px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__nc {
+  background-position: -3710px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ne {
+  background-position: -3732px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__nf {
+  background-position: -3752px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ng {
+  background-position: -3774px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__ni {
+  background-position: -3796px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__nl {
+  background-position: -3818px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__no {
+  background-position: -3840px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__np {
+  background-position: -3862px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__nr {
+  background-position: -3877px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__nu {
+  background-position: -3899px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__nz {
+  background-position: -3921px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__om {
+  background-position: -3943px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__pa {
+  background-position: -3965px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__pe {
+  background-position: -3987px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__pf {
+  background-position: -4009px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__pg {
+  background-position: -4031px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__ph {
+  background-position: -4053px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__pk {
+  background-position: -4075px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__pl {
+  background-position: -4097px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__pm {
+  background-position: -4119px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__pn {
+  background-position: -4141px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__pr {
+  background-position: -4163px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ps {
+  background-position: -4185px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__pt {
+  background-position: -4207px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__pw {
+  background-position: -4229px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__py {
+  background-position: -4251px 0;
+  height: 11px;
+}
+
+.iti__flag.iti__qa {
+  background-position: -4273px 0;
+  height: 8px;
+}
+
+.iti__flag.iti__re {
+  background-position: -4295px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ro {
+  background-position: -4317px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__rs {
+  background-position: -4339px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ru {
+  background-position: -4361px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__rw {
+  background-position: -4383px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__sa {
+  background-position: -4405px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__sb {
+  background-position: -4427px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__sc {
+  background-position: -4449px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__sd {
+  background-position: -4471px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__se {
+  background-position: -4493px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__sg {
+  background-position: -4515px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__sh {
+  background-position: -4537px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__si {
+  background-position: -4559px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__sj {
+  background-position: -4581px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__sk {
+  background-position: -4603px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__sl {
+  background-position: -4625px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__sm {
+  background-position: -4647px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__sn {
+  background-position: -4669px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__so {
+  background-position: -4691px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__sr {
+  background-position: -4713px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ss {
+  background-position: -4735px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__st {
+  background-position: -4757px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__su {
+  background-position: -4779px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__sv {
+  background-position: -4801px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__sx {
+  background-position: -4823px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__sy {
+  background-position: -4845px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__sz {
+  background-position: -4867px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ta {
+  background-position: -4889px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__tc {
+  background-position: -4911px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__td {
+  background-position: -4933px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__tf {
+  background-position: -4955px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__tg {
+  background-position: -4977px 0;
+  height: 13px;
+}
+
+.iti__flag.iti__th {
+  background-position: -4999px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__tj {
+  background-position: -5021px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__tk {
+  background-position: -5043px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__tl {
+  background-position: -5065px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__tm {
+  background-position: -5087px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__tn {
+  background-position: -5109px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__to {
+  background-position: -5131px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__tr {
+  background-position: -5153px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__tt {
+  background-position: -5175px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__tv {
+  background-position: -5197px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__tw {
+  background-position: -5219px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__tz {
+  background-position: -5241px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ua {
+  background-position: -5263px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ug {
+  background-position: -5285px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__uk {
+  background-position: -5307px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__um {
+  background-position: -5329px 0;
+  height: 11px;
+}
+
+.iti__flag.iti__un {
+  background-position: -5351px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__us {
+  background-position: -5373px 0;
+  height: 11px;
+}
+
+.iti__flag.iti__uy {
+  background-position: -5395px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__uz {
+  background-position: -5417px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__va {
+  background-position: -5439px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__vc {
+  background-position: -5456px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ve {
+  background-position: -5478px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__vg {
+  background-position: -5500px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__vi {
+  background-position: -5522px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__vn {
+  background-position: -5544px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__vu {
+  background-position: -5566px 0;
+  height: 12px;
+}
+
+.iti__flag.iti__wf {
+  background-position: -5588px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__ws {
+  background-position: -5610px 0;
+  height: 10px;
+}
+
+.iti__flag.iti__xk {
+  background-position: -5632px 0;
+  height: 15px;
+}
+
+.iti__flag.iti__ye {
+  background-position: -5654px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__yt {
+  background-position: -5676px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__za {
+  background-position: -5698px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__zm {
+  background-position: -5720px 0;
+  height: 14px;
+}
+
+.iti__flag.iti__zw {
+  background-position: -5742px 0;
+  height: 10px;
+}
+
+@media (max-width: 1280px) {
+  .xl\:bg-hero-about {
+    background-image: none;
+  }
+  .xl\:bg-hero-streamline {
+    background-image: none;
+  }
+  .xl\:bg-hero-ci {
+    background-image: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .contact > div {
+    margin-bottom: 1.75rem;
+  }
+  .contact > div label {
+    border-radius: 0.375rem;
+    left: 0.25rem;
+    position: absolute;
+    top: -0.75rem;
+    z-index: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+
+.tab-active {
+  background: linear-gradient(to top right, #ffc04d, #ffe34d);
+  color: black !important;
+}
+.nav-diagonal-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 52, 52, 0.88),
+    rgba(61, 61, 61, 0.53)
+  );
+}
+
+.bg-testimonial-arrow {
+  background-image: url(../images/carousel-arrow-75b88dde81.webp);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent; /* No visible thumb */
+}
+
+.hide-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* No visible track */
+}
+
+/* Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Internet Explorer and Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar */
+}
+
+#slides,
+.target-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+}
+
+#slides li {
+  margin-right: 3rem;
+}
+
+.is_actiive {
+  background: linear-gradient(to right, #da1c1c, #ee312f);
+  color: white;
+}
+
+@media (max-width: 640px) {
+  #slides li {
+    margin-right: 0; /* No margin on mobile */
+    flex: 0 0 100%; /* Each slide takes full width on mobile */
+    transition: none; /* Disable transition on mobile */
+  }
+
+  .padi {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.tab-button {
+  display: none; /* Hide all tabs by default */
+}
+
+@media (max-width: 880px) {
+  .tab-button.tab-active {
+    display: flex; /* Show only the active tab */
+    justify-content: center; /* Center the active tab */
+  }
+}
+
+.tab-text.hidden {
+  display: none; /* Ensure hidden content is not displayed */
+}
+
+/* Optional: Add styles to make the active tab visually distinct */
+.tab-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.rotate-180 {
+  transform: rotate(180deg); /* Rotate 180 degrees */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+@media (min-width: 1024px) {
+  .default-spacing {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+  .contact > div label {
+    font-size: 11.5px;
+  }
+
+  .contact > div input,
+  .contact > div select,
+  .contact > div textarea {
+    font-size: 14px;
+  }
+  .paddd {
+    padding: 0px 25% !important;
+  }
+  .main-slidess li {
+    margin-right: 3rem !important;
+  }
+}
+
+/* Styles for desktop slides */
+#splide01-list2222 {
+  display: flex; /* Flex to align items */
+  overflow: hidden; /* Hide overflow */
+}
+
+#splide01-list2222 li {
+  width: 300px !important; /* Set cards to take 25% of the width minus margin */
+  margin-right: 2rem; /* Maintain margin between slides */
+  display: flex; /* Ensure cards are flex containers */
+  opacity: 1; /* Set opacity to 1 for visibility */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+/* Ensure only one slide is visible on mobile */
+@media (max-width: 768px) {
+  #splide01-list2222 {
+    flex-direction: column; /* Stack slides vertically */
+  }
+  #splide01-list2222 li {
+    display: none; /* Hide all slides initially */
+    width: 100% !important; /* Take full width */
+  }
+  #splide01-list2222 li.is-active {
+    display: flex; /* Show the active slide */
+  }
+}
+/* Desktop - showing all slides */
+.slider {
+  display: flex;
+}
+
+.slide {
+  flex: 1;
+}
+
+/* Mobile - showing one slide at a time */
+@media (max-width: 768px) {
+  .slidersss {
+    width: 100%;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out; /* Add transition for smooth sliding */
+  }
+
+  .slide {
+    min-width: 100%;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.dots {
+  width: 100%;
+}
+/* Dots styling */
+.dots button {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.active {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity)) !important;
+  transform: scale(1.2); /* Scale active dot */
+}
+.dot {
+  background-color: #000;
+  width: 100px;
+  height: 20px;
+}
+
+/* Show dots only on mobile */
+@media (max-width: 768px) {
+  .dots {
+    display: flex;
+  }
+
+  .cards {
+    width: 100%;
+  }
+}
+/* Make buttons full width on mobile */
+.tab-button {
+  width: 100%; /* Full width on mobile */
+  max-width: none; /* Remove any max-width constraints */
+  justify-content: center; /* Center the content */
+}
+
+/* Adjust container to show one button at a time on mobile */
+@media (max-width: 640px) {
+  .tabss ul {
+    width: 100%; /* Ensure the container takes full width */
+  }
+  .tab-button {
+    flex: 0 0 100%; /* Take full width of the container */
+    max-width: 100%; /* Ensure it doesn't shrink below full width */
+  }
+  .tab-button.tab-active {
+    scroll-snap-align: center; /* Snap to center */
+  }
+  .tab-button {
+    display: none;
+  }
+  .tab-button.tab-active {
+    display: flex; /* Or block, depending on your design */
+  }
+}
+
+/*   CUSTOM CAROUSEL */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #333;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+
+  text-align: center;
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 15px;
+}
+
+.right-arrow {
+  right: 15px;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.custom-sliderr {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slide {
+  flex: 0 0 90%; /* Full width by default */
+}
+.slide.two-slides {
+  flex: 0 0 51%; /* Two slides per view on tablets */
+}
+.slide.four-slides {
+  flex: 0 0 25%; /* Four slides per view on desktop */
+}
+
+/*  ADS COROUSEl */
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+/* @media screen and (max-width: 500px) {
+  .wrapper-about {
+    max-width: 90%;
+    overflow-x: hidden;
+    margin-inline: auto;
+  }
+} */
+
+.wrapper i:first-child {
+  margin-left: 5px;
+}
+.wrapper i:last-child {
+  margin-right: 5px;
+}
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 2) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 24px;
+  width: 95%;
+  margin-inline: auto;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 1) - 12px);
+    width: 80%;
+  }
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+}
+
+.white-overlay:before {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(var(--tw-gradient-stops))
+  );
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-from-position: ;
+  --tw-gradient-to: hsla(0, 0%, 100%, 0) var(--tw-gradient-from-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+  --tw-gradient-to-position: ;
+  mix-blend-mode: soft-light;
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .5);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+@media (min-width: 1380px) {
+  .showing {
+    display: flex !important;
+  }
+  .custom-container {
+    max-width: 1380px;
+    border-radius: 1rem;
+    top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 667px) {
+  .tab-button {
+    width: 510px;
+  }
+}
